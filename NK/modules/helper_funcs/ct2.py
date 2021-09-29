@@ -2,7 +2,7 @@ from functools import wraps
 
 from telegram import Bot, Chat, ChatMember, Update, User, ParseMode
 
-from mrjoker import dispatcher, DEL_CMDS, WHITELIST_USERS, SUPPORT_CHAT, SUDO_USERS, DEV_USERS
+from NK import dispatcher, DEL_CMDS, WHITELIST_USERS, SUPPORT_CHAT, SUDO_USERS, DEV_USERS
 
 def is_whitelist_plus(chat: Chat, user_id: int, member: ChatMember = None) -> bool:
     return user_id in WHITELIST_USERS or user_id in SUPPORT_CHAT or user_id in SUDO_USERS or user_id in DEV_USERS
@@ -308,5 +308,5 @@ def connection_status(func):
     return connected_status
 
 
-from mrjoker.modules import connection
+from NK.modules import connection
 connected = connection.connected
