@@ -2,7 +2,7 @@ from time import perf_counter
 from functools import wraps
 from cachetools import TTLCache
 from threading import RLock
-from mrjoker import (
+from NK import (
     DEL_CMDS,
     DEV_USERS,
     DRAGONS,
