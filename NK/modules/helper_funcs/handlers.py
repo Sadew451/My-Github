@@ -1,6 +1,6 @@
-import mrjoker.modules.sql.blacklistusers_sql as sql
-from mrjoker import ALLOW_EXCL
-from mrjoker import DEV_USERS, DRAGONS, DEMONS, TIGERS, WOLVES
+import NK.modules.sql.blacklistusers_sql as sql
+from NK import ALLOW_EXCL
+from NK import DEV_USERS, DRAGONS, DEMONS, TIGERS, WOLVES
 
 from telegram import Update
 from telegram.ext import CommandHandler, MessageHandler, RegexHandler, Filters
