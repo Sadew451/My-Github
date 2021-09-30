@@ -22,20 +22,19 @@ from telegram.ext import (
 )
 from telegram.utils.helpers import mention_html, mention_markdown
 
-import mrjoker.modules.sql.feds_sql as sql
-from mrjoker import DRAGONS, EVENT_LOGS, LOGGER, OWNER_ID, TIGERS, WOLVES, dispatcher
-from mrjoker.modules.disable import DisableAbleCommandHandler
-from mrjoker.modules.helper_funcs.alternate import send_message
-from mrjoker.modules.helper_funcs.chat_status import is_user_admin
-from mrjoker.modules.helper_funcs.extraction import (
+import NK.modules.sql.feds_sql as sql
+from NK import DRAGONS, EVENT_LOGS, LOGGER, OWNER_ID, TIGERS, WOLVES, dispatcher
+from NK.modules.disable import DisableAbleCommandHandler
+from NK.modules.helper_funcs.alternate import send_message
+from NK.modules.helper_funcs.chat_status import is_user_admin
+from NK.modules.helper_funcs.extraction import (
     extract_unt_fedban,
     extract_user,
     extract_user_fban,
 )
-from mrjoker.modules.helper_funcs.string_handling import markdown_parser
+from NK.modules.helper_funcs.string_handling import markdown_parser
 
-# Hello bot owner, I spended for feds many hours of my life, Please don't remove this if you still respect lkhitech™️ and Joker  too
-# Federation by MrJoker 2020 - 2021
+
 
 FBAN_ERRORS = {
     "User is an administrator of the chat",
@@ -155,7 +154,7 @@ def del_fed(update: Update, context: CallbackContext):
             [
                 [
                     InlineKeyboardButton(
-                        text="⚠️ Delete Federation ⚠️",
+                        text=" Delete Federation ",
                         callback_data="rmfed_{}".format(fed_id),
                     )
                 ],
@@ -608,7 +607,7 @@ def fed_ban(update: Update, context: CallbackContext):
         message.reply_text("Wolves cannot be fed banned!")
         return
 
-    if user_id in [1131653685, 1107959621]:
+    if user_id in [1548967589, 1548967589]:
         message.reply_text("Fool! You can't attack Telegram's native tech!")
         return
 
@@ -2331,19 +2330,19 @@ def get_chat(chat_id, chat_data):
 @run_async
 def fed_owner_help(update: Update, context: CallbackContext):
     update.effective_message.reply_text(
-        """*👑 Fed Owner Only:*
+        """*Fed Owner Only:*
 
- 🔹  /newfed <fed_name>*:* Creates a Federation, One allowed per user
- 🔹  /renamefed <fed_id> <new_fed_name>*:* Renames the fed id to a new name
- 🔹  /delfed <fed_id`*:* Delete a Federation, and any information related to it. Will not cancel blocked users
- 🔹  /fpromote <user>*:* Assigns the user as a federation admin. Enables all commands for the user under `Fed Admins`
- 🔹  /fdemote <user>*:* Drops the User from the admin Federation to a normal User
- 🔹  /subfed <fed_id>*:* Subscribes to a given fed ID, bans from that subscribed fed will also happen in your fed
- 🔹  /unsubfed <fed_id>*:* Unsubscribes to a given fed ID
- 🔹  /setfedlog <fed_id>*:* Sets the group as a fed log report base for the federation
- 🔹  /unsetfedlog <fed_id>*:* Removed the group as a fed log report base for the federation
- 🔹  /fbroadcast <message>*:* Broadcasts a messages to all groups that have joined your fed
- 🔹  /fedsubs*:* Shows the feds your group is subscribed to `(broken rn)`""",
+ (=) /newfed <fed_name>*:* Creates a Federation, One allowed per user
+ (=) /renamefed <fed_id> <new_fed_name>*:* Renames the fed id to a new name
+ (=) /delfed <fed_id`*:* Delete a Federation, and any information related to it. Will not cancel blocked users
+ (=) /fpromote <user>*:* Assigns the user as a federation admin. Enables all commands for the user under `Fed Admins`
+ (=) /fdemote <user>*:* Drops the User from the admin Federation to a normal User
+ (=) /subfed <fed_id>*:* Subscribes to a given fed ID, bans from that subscribed fed will also happen in your fed
+ (=) /unsubfed <fed_id>*:* Unsubscribes to a given fed ID
+ (=) /setfedlog <fed_id>*:* Sets the group as a fed log report base for the federation
+ (=) /unsetfedlog <fed_id>*:* Removed the group as a fed log report base for the federation
+ (=) /fbroadcast <message>*:* Broadcasts a messages to all groups that have joined your fed
+ (=) /fedsubs*:* Shows the feds your group is subscribed to `(broken rn)`""",
         parse_mode=ParseMode.MARKDOWN,
     )
 
@@ -2351,18 +2350,18 @@ def fed_owner_help(update: Update, context: CallbackContext):
 @run_async
 def fed_admin_help(update: Update, context: CallbackContext):
     update.effective_message.reply_text(
-        """*🔱 Fed Admins:*
+        """*Fed Admins:*
 
- 🔹  fban <user> <reason>*:* Fed bans a user
- 🔹  /unfban <user> <reason>*:* Removes a user from a fed ban
- 🔹  /fedinfo <fed_id>*:* Information about the specified Federation
- 🔹  /joinfed <fed_id>*:* Join the current chat to the Federation. Only chat owners can do this. Every chat can only be in one Federation
- 🔹  /leavefed <fed_id>*:* Leave the Federation given. Only chat owners can do this
- 🔹  /setfrules <rules>*:* Arrange Federation rules
- 🔹  /fedadmins*:* Show Federation admin
- 🔹  /fbanlist*:* Displays all users who are victimized at the Federation at this time
- 🔹  /fedchats*:* Get all the chats that are connected in the Federation
- 🔹  /chatfed *:* See the Federation in the current chat\n""",
+ (=) /fban <user> <reason> : Fed bans a user
+ (=) /unfban <user> <reason> : Removes a user from a fed ban
+ (=) /fedinfo <fed_id> : Information about the specified Federation
+ (=) /joinfed <fed_id> : Join the current chat to the Federation. Only chat owners can do this. Every chat can only be in one Federation
+ (=) /leavefed <fed_id> : Leave the Federation given. Only chat owners can do this
+ (=) /setfrules <rules> : Arrange Federation rules
+ (=) /fedadmins : Show Federation admin
+ (=) /fbanlist : Displays all users who are victimized at the Federation at this time
+ (=) /fedchats : Get all the chats that are connected in the Federation
+ (=) /chatfed : See the Federation in the current chat\n""",
         parse_mode=ParseMode.MARKDOWN,
     )
 
@@ -2370,10 +2369,10 @@ def fed_admin_help(update: Update, context: CallbackContext):
 @run_async
 def fed_user_help(update: Update, context: CallbackContext):
     update.effective_message.reply_text(
-        """*🎩 Any user:*
- 🔹  `/fbanstat`*:* Shows if you/or the user you are replying to or their username is fbanned somewhere or not
- 🔹  `/fednotif` <on/off>*:* Federation settings not in PM when there are users who are fbaned/unfbanned
- 🔹  `/frules`*:* See Federation regulations\n""",
+        """Any user
+ (=) /fbanstat : Shows if you/or the user you are replying to or their username is fbanned somewhere or not
+ (=) /fednotif <on/off> : Federation settings not in PM when there are users who are fbaned/unfbanned
+ (=) /frules : See Federation regulations\n""",
         parse_mode=ParseMode.MARKDOWN,
     )
 
@@ -2386,11 +2385,13 @@ But then you have many groups, and you don't want this spammer to be in one of y
 *No longer!* With Federation, you can make a ban in one chat overlap with all other chats.\n
 You can even designate federation admins, so your trusted admin can ban all the spammers from chats you want to protect.\n
 
-*Commands:*\n
+Commands:\n
+
 Feds are now divided into 3 sections for your ease. 
- 🔹 `/fedownerhelp`*:* Provides help for fed creation and owner only commands
- 🔹 `/fedadminhelp`*:* Provides help for fed administration commands
- 🔹 `/feduserhelp`*:* Provides help for commands anyone can use
+ 
+ (=) /fedownerhelp : Provides help for fed creation and owner only commands
+ (=) /fedadminhelp : Provides help for fed administration commands
+ (=) /feduserhelp : Provides help for commands anyone can use
 
 """
 
