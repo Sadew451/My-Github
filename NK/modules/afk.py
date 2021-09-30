@@ -1,12 +1,12 @@
 import random, html
 
-from mrjoker import dispatcher
-from mrjoker.modules.disable import (
+from NK import dispatcher
+from NK.modules.disable import (
     DisableAbleCommandHandler,
     DisableAbleMessageHandler,
 )
-from mrjoker.modules.sql import afk_sql as sql
-from mrjoker.modules.user import get_user_id
+from NK.modules.sql import afk_sql as sql
+from NK.modules.user import get_user_id
 from telegram import MessageEntity, Update
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, Filters, MessageHandler, run_async
