@@ -10,9 +10,9 @@ from typing import List
 from telegram import ParseMode, InputMediaPhoto, Update, Bot, TelegramError
 from telegram.ext import run_async
 
-from mrjoker import dispatcher
+from NK import dispatcher
 
-from mrjoker.modules.disable import DisableAbleCommandHandler
+from NK.modules.disable import DisableAbleCommandHandler
 
 
 opener = urllib.request.build_opener()
@@ -182,7 +182,8 @@ def scam(imgspage, lim):
 
 
 __help__ = """
-🔹 `/reverse`: Does a reverse image search of the media which it was replied to.
+(=) /reverse: Does a reverse image search of the media which it was replied to.
+
 """
 
 __mod_name__ = "Image Lookup"
