@@ -2,9 +2,9 @@ import speedtest
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.ext import CallbackContext, CallbackQueryHandler, run_async
 
-from mrjoker import DEV_USERS, dispatcher
-from mrjoker.modules.disable import DisableAbleCommandHandler
-from mrjoker.modules.helper_funcs.chat_status import dev_plus
+from NK import DEV_USERS, dispatcher
+from NK.modules.disable import DisableAbleCommandHandler
+from NK.modules.helper_funcs.chat_status import dev_plus
 
 
 def convert(speed):
@@ -16,8 +16,8 @@ def convert(speed):
 def speedtestxyz(update: Update, context: CallbackContext):
     buttons = [
         [
-            InlineKeyboardButton("Image 🖼", callback_data="speedtest_image"),
-            InlineKeyboardButton("Text 📃", callback_data="speedtest_text"),
+            InlineKeyboardButton("Image ", callback_data="speedtest_image"),
+            InlineKeyboardButton("Text ", callback_data="speedtest_text"),
         ]
     ]
     update.effective_message.reply_text(
