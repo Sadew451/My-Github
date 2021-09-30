@@ -6,9 +6,9 @@ import aiohttp
 import traceback
 
 from telethon import events
-from mrjoker.utils.plh import humanbytes, time_formatter
-from mrjoker import telethn as bot
-from mrjoker.utils.plh import humanbytes, progress
+from NK.utils.plh import humanbytes, time_formatter
+from NK import telethn as bot
+from NK.utils.plh import humanbytes, progress
 
 TEMP_DOWNLOAD_DIRECTORY = "./"
 
@@ -34,7 +34,7 @@ async def download_coroutine(session, url, file_name, event, start, bot):
 **URL:** {}
 **File Name:** {}
 **File Size:** {}
-**© @AnimX_Robot**""".format(
+**© @TheNatsukiBot**""".format(
                 url,
                 os.path.basename(file_name).replace("%20", " "),
                 humanbytes(total_length),
@@ -153,7 +153,7 @@ async def tsh(event):
 
             str(time.time() - start)
             await orta.edit(
-                f"File Successfully Uploaded to TransferSh.\n\nLink 👉 {download_link}\n*Expired Date* 👉 {final_date}\n\nUploaded by **@AnimX_Robot**"
+                f"File Successfully Uploaded to TransferSh.\n\nLink 👉 {download_link}\n*Expired Date* 👉 {final_date}\n\nUploaded by **@TheNatsukiBot**"
             )
         except Exception as e:
             traceback.print_exc()
@@ -188,7 +188,7 @@ async def tmp(event):
 
             str(time.time() - start)
             await orta.edit(
-                f"*File Successfully Uploaded to TmpNinja.*\n\n*Link* 👉 {download_link}\n\n*Uploaded by* *@AnimX_Robot*"
+                f"*File Successfully Uploaded to TmpNinja.*\n\n*Link* 👉 {download_link}\n\n*Uploaded by* *@TheNatsukiBot*"
             )
         except Exception as e:
             traceback.print_exc()
@@ -229,7 +229,7 @@ async def up(event):
                 event.chat.id,
                 dosya,
                 force_document=True,
-                caption="Uploaded By **@AnimX_Robot**",
+                caption="Uploaded By **@TheNatsukiBot**",
             )
         except Exception as e:
             traceback.print_exc()
@@ -252,9 +252,15 @@ __mod_name__ = "URL Upload"
 
 __help__ = """
 Here is the help for the Upload module:
-╔Link To File:
-╚ `/up` *:*  reply to a direct download link to upload it to telegram as files
+
+Link To File
+
+(=)/up :  reply to a direct download link to upload it to telegram as files
  
-╔File To Link:
-╚ `/transfersh`*:* reply to a telegram file to upload it on transfersh and get direct download link
- """     
+File To Link
+
+(=) /transfersh : reply to a telegram file to upload it on transfersh and get direct download link
+
+@TheNatsukiBot
+
+"""     
