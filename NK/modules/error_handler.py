@@ -9,7 +9,7 @@ import requests
 from telegram import Update, InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.ext import CallbackContext, CommandHandler
 
-from mrjoker import dispatcher, DEV_USERS, OWNER_ID
+from NK import dispatcher, DEV_USERS, OWNER_ID
 
 pretty_errors.mono()
 
