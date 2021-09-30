@@ -4,9 +4,9 @@ from typing import List
 from telegram import Update
 from telegram.ext import run_async,CallbackContext
 
-from mrjoker import dispatcher
-from mrjoker.modules.disable import DisableAbleCommandHandler
-from mrjoker.modules.helper_funcs.chat_status import user_admin
+from NK import dispatcher
+from NK.modules.disable import DisableAbleCommandHandler
+from NK.modules.helper_funcs.chat_status import user_admin
 
 
 
@@ -157,10 +157,10 @@ def kill(update: Update, context: CallbackContext):
 
 
 __help__ = """
-╔ `/love`*:* 
-╠ `/hack`*:*
-╠ `/bombs`*:*
-╚ `/kill`*:*
+(=) /love`*:* 
+(=) /hack`*:*
+(=) /bombs`*:*
+(=) /kill`*:*
 """
 
 __mod_name__ = "Animation"
