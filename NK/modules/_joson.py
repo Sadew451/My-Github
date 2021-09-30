@@ -1,7 +1,7 @@
 import io
-from mrjoker.events import register
-from mrjoker import telethn as borg
-from mrjoker import telethn as tbot
+from NK.events import register
+from NK import telethn as borg
+from NK import telethn as tbot
 from telethon import types
 from telethon import events
 from telethon.tl import functions, types
@@ -54,7 +54,8 @@ async def _(event):
 
 
 __help__ = """
- ❍ /json*:* Get Detailed info about any message
+ 
+❍ /json*:* Get Detailed info about any message
 """
 
-__mod_name__ = "JSON"
+__mod_name__ = "Json"
