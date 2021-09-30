@@ -5,23 +5,23 @@ from telegram import ParseMode, Message
 from telegram.error import BadRequest
 from telegram.ext import CommandHandler, run_async 
 
-import mrjoker.modules.sql.notes_sql as sql
-from mrjoker import dispatcher, LOGGER, OWNER_ID, JOIN_LOGGER, SUPPORT_CHAT
-from mrjoker.__main__ import DATA_IMPORT
-from mrjoker.modules.helper_funcs.chat_status import user_admin
-from mrjoker.modules.helper_funcs.alternate import typing_action
+import NK.modules.sql.notes_sql as sql
+from NK import dispatcher, LOGGER, OWNER_ID, JOIN_LOGGER, SUPPORT_CHAT
+from NK.__main__ import DATA_IMPORT
+from NK.modules.helper_funcs.chat_status import user_admin
+from NK.modules.helper_funcs.alternate import typing_action
 
-# from mrjoker.modules.rules import get_rules
-import mrjoker.modules.sql.rules_sql as rulessql
+# from NK.modules.rules import get_rules
+import NK.modules.sql.rules_sql as rulessql
 
-# from mrjoker.modules.sql import warns_sql as warnssql
-import mrjoker.modules.sql.blacklist_sql as blacklistsql
-from mrjoker.modules.sql import disable_sql as disabledsql
+# from NK.modules.sql import warns_sql as warnssql
+import NK.modules.sql.blacklist_sql as blacklistsql
+from NK.modules.sql import disable_sql as disabledsql
 
-# from mrjokert.modules.sql import cust_filters_sql as filtersql
-# import mrjoker.modules.sql.welcome_sql as welcsql
-import mrjoker.modules.sql.locks_sql as locksql
-from mrjoker.modules.connection import connected
+# from NK.modules.sql import cust_filters_sql as filtersql
+# import NK.modules.sql.welcome_sql as welcsql
+import NK.modules.sql.locks_sql as locksql
+from NK.modules.connection import connected
 
 
 @run_async
@@ -370,9 +370,10 @@ def get_chat(chat_id, chat_data):
 __mod_name__ = "Backup"
 
 __help__ = """
-╔*Only for group owner:*
-╠ `/import`: Reply to the backup file for the butler / mrjoker group to import as much as possible, making transfers very easy! \ Note that files / photos cannot be imported due to telegram restrictions.
-╚ `/export`: Export group data, which will be exported are: rules, notes (documents, images, music, video, audio, voice, text, text buttons) \
+*Only for group owner:*
+
+(=) /import`: Reply to the backup file for the butler / mrjoker group to import as much as possible, making transfers very easy! \ Note that files / photos cannot be imported due to telegram restrictions.
+(=) /export`: Export group data, which will be exported are: rules, notes (documents, images, music, video, audio, voice, text, text buttons) \
 
 """
 
