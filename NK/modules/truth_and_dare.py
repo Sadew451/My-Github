@@ -1,9 +1,9 @@
 import html
 import random
-import mrjoker.modules.truth_and_dare_string as truth_and_dare_string
-from mrjoker import dispatcher
+import NK.modules.truth_and_dare_string as truth_and_dare_string
+from NK import dispatcher
 from telegram import ParseMode, Update, Bot
-from mrjoker.modules.disable import DisableAbleCommandHandler
+from NK.modules.disable import DisableAbleCommandHandler
 from telegram.ext import CallbackContext, run_async
 
 @run_async
