@@ -3,8 +3,8 @@ from telegram import ParseMode, Update
 from telegram.ext import CallbackContext, run_async
 from wikipedia.exceptions import DisambiguationError, PageError
 
-from mrjoker import dispatcher
-from mrjoker.modules.disable import DisableAbleCommandHandler
+from NK import dispatcher
+from NK.modules.disable import DisableAbleCommandHandler
 
 
 @run_async
