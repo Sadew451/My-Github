@@ -10,9 +10,9 @@ from pyrogram.errors.exceptions.bad_request_400 import (
 )
 from pyrogram.types import ChatPermissions, InlineKeyboardButton, InlineKeyboardMarkup
 
-from mrjoker import DRAGONS as SUDO_USERS
-from mrjoker import pbot
-from mrjoker.modules.sql_extended import forceSubscribe_sql as sql
+from NK import DRAGONS as SUDO_USERS
+from NK import pbot
+from NK.modules.sql_extended import forceSubscribe_sql as sql
 
 logging.basicConfig(level=logging.INFO)
 
@@ -109,7 +109,7 @@ def _check_member(client, message):
                     )
                 except ChatAdminRequired:
                     sent_message.edit(
-                        "❗ **Mr.Joker not admin here..**\n__Give me ban permissions and retry.. \n#Ending FSub...__"
+                        "❗ **I'M not Admin Here..**\n__Give me ban permissions and retry.. \n#Ending FSub...__"
                     )
 
             except ChatAdminRequired:
@@ -178,23 +178,26 @@ def config(client, message):
 
 
 __help__ = """
-*ForceSubscribe:*
+ ForceSubscribe
 
- 🔹 ANim Manager ✨ can mute members who are not subscribed your channel until they subscribe
- 🔹 When enabled I will mute unsubscribed members and show them a unmute button. When they pressed the button I will unmute them
+ (=) Natsuki ✨ can mute members who are not subscribed your channel until they subscribe
+ (=) When enabled I will mute unsubscribed members and show them a unmute button. When they pressed the button I will unmute them
 
-*Setup*
+Setup
 1) First of all add me in the group as admin with ban users permission and in the channel as admin.
+
 Note: Only creator of the group can setup me and i will not allow force subscribe again if not done so.
  
-*Commmands*
-🔹 `/ForceSubscribe` - To get the current settings.
-🔹`/ForceSubscrib`e no/off/disable - To turn of ForceSubscribe.
-🔹 `/ForceSubscribe` {channel username} - To turn on and setup the channel.
-🔹 `/ForceSubscribe` clear - To unmute all members who muted by me.
+Commmands
+
+(=) /ForceSubscribe - To get the current settings.
+(=) /ForceSubscribe no/off/disable - To turn of ForceSubscribe.
+(=) /ForceSubscribe {channel username} - To turn on and setup the channel.
+(=) /ForceSubscribe clear - To unmute all members who muted by me.
 
 Note: /FSub is an alias of /ForceSubscribe
 
- 
+@TheNatsukiBot
+
 """
 __mod_name__ = "Force Subscribe"
