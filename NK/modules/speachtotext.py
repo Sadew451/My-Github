@@ -103,4 +103,4 @@ vi,xh,yi,yo,zh,zh_CN,zh_TW,zu`
 
 """
 
-__mod_name__ = "TTS/STT"
+__mod_name__ = "Tts/Stt"
