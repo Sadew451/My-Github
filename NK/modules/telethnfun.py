@@ -9,8 +9,8 @@ from bing_image_downloader import downloader
 from requests import get, post
 from telethon.tl import functions, types
 
-from mrjoker import telethn as client
-from mrjoker.events import register
+from NK import telethn as client
+from NK.events import register
 
 
 def progress(current, total):
@@ -52,7 +52,7 @@ async def _(event):
     if event.is_group:
         if not (await is_register_admin(event.input_chat, event.message.sender_id)):
             await event.reply(
-                " lode.. You are not admin..  You can't use this commnd🤣.. But you can use in my pm"
+                " lode.. You are not admin..  You can't use this commnd.. But you can use in my pm"
             )
             return
     # SHOW_DESCRIPTION = False
@@ -80,7 +80,7 @@ async def img_sampler(event):
         return
     if event.is_group:
         if not (await is_register_admin(event.input_chat, event.message.sender_id)):
-            await event.reply("..hey fool You are not admin😂.. use in my pm")
+            await event.reply("..hey fool You are not admin.. use in my pm")
             return
     query = event.pattern_match.group(1)
     jit = f'"{query}"'
