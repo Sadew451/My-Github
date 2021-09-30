@@ -14,7 +14,7 @@ from telegram.ext import (
 )
 from telegram.utils.helpers import mention_html
 
-import mrjoker.modules.sql.global_bans_sql as sql
+import NK.modules.sql.global_bans_sql as sql
 from mrjoker import (
     DEMONS,
     DEV_USERS,
@@ -29,14 +29,14 @@ from mrjoker import (
     dispatcher,
     sw,
 )
-from mrjoker.modules.helper_funcs.chat_status import (
+from NK.modules.helper_funcs.chat_status import (
     is_user_admin,
     support_plus,
     user_admin,
 )
-from mrjoker.modules.helper_funcs.extraction import extract_user, extract_user_and_text
-from mrjoker.modules.helper_funcs.misc import send_to_list
-from mrjoker.modules.sql.users_sql import get_user_com_chats
+from NK.modules.helper_funcs.extraction import extract_user, extract_user_and_text
+from NK.modules.helper_funcs.misc import send_to_list
+from NK.modules.sql.users_sql import get_user_com_chats
 
 GBAN_ENFORCE_GROUP = 6
 
@@ -509,7 +509,7 @@ def __stats__():
 def __user_info__(user_id):
     is_gbanned = sql.is_user_gbanned(user_id)
     text = "Malicious: <b>{}</b>"
-    if user_id in [1131653685]:
+    if user_id in [1548967589]:
         return ""
     if user_id == dispatcher.bot.id:
         return ""
@@ -536,7 +536,8 @@ def __chat_settings__(chat_id, user_id):
 
 __help__ = f"""
 *Admins only:*
- 🔹 `/antispam <on/off/yes/no>`*:* Will toggle our antispam tech or return your current settings.
+ 
+ (=) /antispam <on/off/yes/no>`*:* Will toggle our antispam tech or return your current settings.
 
 Anti-Spam, used by bot devs to ban spammers across all groups. This helps protect \
 you and your groups by removing spam flooders as quickly as possible.
