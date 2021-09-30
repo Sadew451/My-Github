@@ -1,6 +1,6 @@
 import threading
 from sqlalchemy import Column, String
-from mrjoker.modules.sql import BASE, SESSION
+from NK.modules.sql import BASE, SESSION
 
 
 class NSFWChats(BASE):
