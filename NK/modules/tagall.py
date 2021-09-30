@@ -9,8 +9,8 @@
 
 from pyrogram import filters
 
-from mrjoker.pyro.pluginshelper import admins_only, get_text
-from mrjoker import pbot
+from NK.pyrograme.pluginshelper import admins_only, get_text
+from NK import pbot
 
 
 @pbot.on_message(filters.command("tagall") & ~filters.edited & ~filters.bot)
@@ -32,5 +32,8 @@ async def tagall(client, message):
 
 __mod_name__ = "Tagall"
 __help__ = """
-╠ `/tagall` : Tag everyone in a chat
+(=) /tagall : Tag everyone in a chat
+
+@TheNatsukiBot
+
 """
