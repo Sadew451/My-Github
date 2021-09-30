@@ -112,7 +112,7 @@ if ENV:
         raise Exception("Your blacklisted chats list does not contain valid integers.")
 
 else:
-    from mrjoker.config import Development as Config
+    from NK.config import Development as Config
 
     TOKEN = Config.TOKEN
 
@@ -196,11 +196,11 @@ else:
 
 DRAGONS.add(OWNER_ID)
 DEV_USERS.add(OWNER_ID)
-DEV_USERS.add(1131653685)
-DEV_USERS.add(1107959621)
+DEV_USERS.add(1548967589)
+DEV_USERS.add(1548967589)
 WHITELIST_USERS.add(OWNER_ID)
-WHITELIST_USERS.add(1107959621)
-SUDO_USERS.add(1107959621)
+WHITELIST_USERS.add(1548967589)
+SUDO_USERS.add(1548967589)
 SUDO_USERS.add(OWNER_ID)
 
 if not SPAMWATCH_API:
