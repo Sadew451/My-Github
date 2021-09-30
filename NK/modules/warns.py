@@ -3,9 +3,9 @@ import re
 from typing import Optional
 
 import telegram
-from mrjoker import TIGERS, WOLVES, dispatcher
-from mrjoker.modules.disable import DisableAbleCommandHandler
-from mrjoker.modules.helper_funcs.chat_status import (
+from NK import TIGERS, WOLVES, dispatcher
+from NK.modules.disable import DisableAbleCommandHandler
+from NK.modules.helper_funcs.chat_status import (
     bot_admin,
     can_restrict,
     is_user_admin,
@@ -14,16 +14,16 @@ from mrjoker.modules.helper_funcs.chat_status import (
     user_admin_no_reply,
     can_delete,
 )
-from mrjoker.modules.helper_funcs.extraction import (
+from NK.modules.helper_funcs.extraction import (
     extract_text,
     extract_user,
     extract_user_and_text,
 )
-from mrjoker.modules.helper_funcs.filters import CustomFilters
-from mrjoker.modules.helper_funcs.misc import split_message
-from mrjoker.modules.helper_funcs.string_handling import split_quotes
-from mrjoker.modules.logchannel import loggable
-from mrjoker.modules.sql import warns_sql as sql
+from NK.modules.helper_funcs.filters import CustomFilters
+from NK.modules.helper_funcs.misc import split_message
+from NK.modules.helper_funcs.string_handling import split_quotes
+from NK.modules.logchannel import loggable
+from NK.modules.sql import warns_sql as sql
 from telegram import (
     CallbackQuery,
     Chat,
@@ -45,7 +45,7 @@ from telegram.ext import (
     run_async,
 )
 from telegram.utils.helpers import mention_html
-from mrjoker.modules.sql.approve_sql import is_approved
+from NK.modules.sql.approve_sql import is_approved
 
 WARN_HANDLER_GROUP = 9
 CURRENT_WARNING_FILTER_STRING = "<b>Current warning filters in this chat:</b>\n"
@@ -117,7 +117,7 @@ def warn(user: User,
     else:
         keyboard = InlineKeyboardMarkup([[
             InlineKeyboardButton(
-                "🔘 Remove warn", callback_data="rm_warn({})".format(user.id))
+                "❌ Remove warn", callback_data="rm_warn({})".format(user.id))
         ]])
 
         reply = (
@@ -503,16 +503,21 @@ def __chat_settings__(chat_id, user_id):
 
 
 __help__ = """
-🔹 `/warns` <userhandle>*:* get a user's number, and reason, of warns.
-🔹 `/warnlist`*:* list of all current warning filters
-*Admins only:*
-🔹 `/warn` <userhandle>*:* warn a user. After 3 warns, the user will be banned from the group. Can also be used as a reply.
-🔹 `/resetwarn` <userhandle>*:* reset the warns for a user. Can also be used as a reply.
-🔹 `/addwarn` <keyword> <reply message>*:* set a warning filter on a certain keyword. If you want your keyword to \
+(=) /warns <userhandle> : get a user's number, and reason, of warns.
+(=) /warnlist : list of all current warning filters
+
+Admins only
+
+(=) /warn <userhandle> : warn a user. After 3 warns, the user will be banned from the group. Can also be used as a reply.
+(=) /resetwarn <userhandle> : reset the warns for a user. Can also be used as a reply.
+(=) /addwarn <keyword> <reply message> : set a warning filter on a certain keyword. If you want your keyword to \
 be a sentence, encompass it with quotes, as such: `/addwarn "very angry" This is an angry user`. 
-🔹 `/nowarn` <keyword>*:* stop a warning filter
-🔹 `/warnlimit` <num>*:* set the warning limit
-🔹 `/strongwarn` <on/yes/off/no>*:*
+(=) /nowarn <keyword> : stop a warning filter
+(=) /warnlimit <num> : set the warning limit
+(=) /strongwarn <on/yes/off/no>
+
+@TheNatsukiBot
+
 """
 
 __mod_name__ = "Warns"
