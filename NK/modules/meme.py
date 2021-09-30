@@ -2,20 +2,20 @@ import html
 import random
 import time
 
-import mrjoker.modules.funs as fun_strings
-from mrjoker import dispatcher
-from mrjoker.modules.disable import DisableAbleCommandHandler, DisableAbleMessageHandler
-from mrjoker.modules.helper_funcs.chat_status import is_user_admin
-from mrjoker.modules.helper_funcs.alternate import typing_action
-from mrjoker.modules.helper_funcs.filters import CustomFilters
-from mrjoker.modules.helper_funcs.extraction import extract_user
+import NK.modules.funs as fun_strings
+from NK import dispatcher
+from NK.modules.disable import DisableAbleCommandHandler, DisableAbleMessageHandler
+from NK.modules.helper_funcs.chat_status import is_user_admin
+from NK.modules.helper_funcs.alternate import typing_action
+from NK.modules.helper_funcs.filters import CustomFilters
+from NK.modules.helper_funcs.extraction import extract_user
 from telegram import ChatPermissions, ParseMode, Update
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, run_async, CommandHandler, Filters
 
-import mrjoker.modules.helper_funcs.string_store as fun
+import NK.modules.helper_funcs.string_store as fun
 
-GIF_ID = "CgACAgQAAx0CSVUvGgAC7KpfWxMrgGyQs-GUUJgt-TSO8cOIDgACaAgAAlZD0VHT3Zynpr5nGxsE"
+GIF_ID = "CgACAgQAAx0CVeoJGgACLilhVVjsZ-2GF5nrHo-DWeVIF5z3DQACWAIAAhNgjFKC5a9gHoXnXyEE"
 
 
 @run_async
@@ -106,8 +106,8 @@ def slap(update: Update, context: CallbackContext):
     hit = random.choice(fun_strings.HIT)
     throw = random.choice(fun_strings.THROW)
 
-    if update.effective_user.id == 1107959621:
-        temp = "@ashenwalk scratches {user2}"
+    if update.effective_user.id == 1548967589:
+        temp = "@TeamNatsuki scratches {user2}"
 
     reply = temp.format(user1=user1, user2=user2, item=item, hits=hit, throws=throw)
 
@@ -345,20 +345,23 @@ def goodmorning(update, context):
     
 
 __help__ = """
- 🔹 `/runs`*:* reply a random string from an array of replies
- 🔹 `/slap`*:* slap a user, or get slapped if not a reply
- 🔹 `/shrug`*:* get shrug XD
- 🔹 `/table`*:* get flip/unflip :v
- 🔹 `/decide*:* Randomly answers yes/no/maybe
- 🔹 `/toss`*:* Tosses A coin
- 🔹 `/bluetext`*:* check urself :V
- 🔹 `/roll*:* Roll a dice
- 🔹 `/rlg`*:* Join ears,nose,mouth and create an emo ;-;
- 🔹 `/weebify` <text>*:* returns a weebified text
- 🔹 `/pat`*:* pats a user, or get patted
- 🔹 `/8ball`*:* predicts using 8ball method 
- 🔹 `/decide` can be also used with regex like: `Liza? <question>: randomly answer "Yes, No" etc.`
- 🔹 `/hitler` *:* Quote a message and type this command to make a caption of hitler
+ (=) /runs : reply a random string from an array of replies
+ (=) /slap : slap a user, or get slapped if not a reply
+ (=) /shrug : get shrug XD
+ (=) /table : get flip/unflip :v
+ (=) /decide : Randomly answers yes/no/maybe
+ (=) /toss : Tosses A coin
+ (=) /bluetext : check urself :V
+ (=) /roll : Roll a dice
+ (=) /rlg : Join ears,nose,mouth and create an emo ;-;
+ (=) /weebify` <text> : returns a weebified text
+ (=) /pat : pats a user, or get patted
+ (=) /8ball : predicts using 8ball method 
+ (=) /decide can be also used with regex like: `Liza? <question>: randomly answer "Yes, No" etc.`
+ (=) /hitler : Quote a message and type this command to make a caption of hitler
+
+@TheNatsukiBot
+
 """
 
 SANITIZE_HANDLER = DisableAbleCommandHandler("sanitize", sanitize)
