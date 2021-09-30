@@ -4,15 +4,15 @@ import re
 
 from telegram import Message, Chat, Update, User, ChatPermissions
 
-from mrjoker import TIGERS, WOLVES, dispatcher
-from mrjoker.modules.helper_funcs.chat_status import (
+from NK import TIGERS, WOLVES, dispatcher
+from NK.modules.helper_funcs.chat_status import (
     bot_admin,
     is_user_admin,
     user_admin,
     user_admin_no_reply,
 )
-from mrjoker.modules.logchannel import loggable
-from mrjoker.modules.sql import antiflood_sql as sql
+from NK.modules.logchannel import loggable
+from NK.modules.sql import antiflood_sql as sql
 from telegram.error import BadRequest
 from telegram.ext import (
     CallbackContext,
@@ -23,10 +23,10 @@ from telegram.ext import (
     run_async,
 )
 from telegram.utils.helpers import mention_html, escape_markdown
-from mrjoker.modules.helper_funcs.string_handling import extract_time
-from mrjoker.modules.connection import connected
-from mrjoker.modules.helper_funcs.alternate import send_message
-from mrjoker.modules.sql.approve_sql import is_approved
+from NK.modules.helper_funcs.string_handling import extract_time
+from NK.modules.connection import connected
+from NK.modules.helper_funcs.alternate import send_message
+from NK.modules.sql.approve_sql import is_approved
 
 FLOOD_GROUP = 3
 
@@ -402,18 +402,23 @@ def __chat_settings__(chat_id, user_id):
 
 __help__ = """
 
-╔*Blue text cleaner* removed any made up commands that people send in your chat.
-╠ `/cleanblue` <on/off/yes/no>*:* clean commands after sending
-╠ `/ignoreblue` <word>*:* prevent auto cleaning of the command
-╠ `/unignoreblue` <word>*:* remove prevent auto cleaning of the command
-╚ `/listblue`*:* list currently whitelisted commands
+*Blue text cleaner* removed any made up commands that people send in your chat.
 
-╔*Antiflood* allows you to take action on users that send more than x messages in a row. Exceeding the set flood \ will result in restricting that user. This will mute users if they send more than 10 messages in a row, bots are ignored.
-╚ `/flood`*:* Get the current flood control setting
-╔*Admins only:*
-╚ `/setflood` <int/'no'/'off'>*:* enables or disables flood control
-╔ *Example:* `/setflood 10`
-╚ `/setfloodmode` <ban/kick/mute/tban/tmute> <value>*:* Action to perform when user have exceeded flood limit. ban/kick/mute/tmute/tban
+(=) /cleanblue` <on/off/yes/no>*:* clean commands after sending
+(=) /ignoreblue` <word>*:* prevent auto cleaning of the command
+(=) /unignoreblue` <word>*:* remove prevent auto cleaning of the command
+(=) /listblue`*:* list currently whitelisted commands
+
+*Antiflood* allows you to take action on users that send more than x messages in a row. Exceeding the set flood \ will result in restricting that user. This will mute users if they send more than 10 messages in a row, bots are ignored.
+
+(=) /flood`*:* Get the current flood control setting
+
+*Admins only:*
+
+(=) /setflood` <int/'no'/'off'>*:* enables or disables flood control
+*Example:* `/setflood 10`
+
+(=) /setfloodmode` <ban/kick/mute/tban/tmute> <value>*:* Action to perform when user have exceeded flood limit. ban/kick/mute/tmute/tban
 
 • *Note:*
  • Value must be filled for tban and tmute!!
