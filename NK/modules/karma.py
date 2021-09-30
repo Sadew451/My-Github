@@ -1,13 +1,13 @@
-from mrjoker import pbot as app
-from mrjoker.utils.errors import capture_err
-from mrjoker.function.dbfun import (
+from NK import pbot as app
+from NK.utils.errors import capture_err
+from NK.function.dbfun import (
     update_karma,
     get_karma,
     get_karmas,
     int_to_alpha,
     alpha_to_int,
 )
-from mrjoker.utils.filter_groups import karma_positive_group, karma_negative_group
+from NK.utils.filter_groups import karma_positive_group, karma_negative_group
 from pyrogram import filters
 
 
