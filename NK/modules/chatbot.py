@@ -97,7 +97,7 @@ async def kaj(_, message):
             "I only recognize `/chatbot on` and /chatbot `off only`"
         )
 
-@mrjoker.on_message(filters.command("repo") & ~filters.edited)
+@NK.on_message(filters.command("repo") & ~filters.edited)
 async def repo(_, message):
     await message.reply_text(
         "[GitHub Repo](https://github.com/Sadew451/TeamNatsuki)"
@@ -108,7 +108,7 @@ async def repo(_, message):
         
         
         
-@mrjoker.on_message(
+@NK.on_message(
     filters.text
     & filters.reply
     & ~filters.bot
@@ -214,7 +214,7 @@ async def kaj(client, message):
             return
 
 
-@mrjoker.on_message(
+@NK.on_message(
     filters.text & filters.private & ~filters.edited & filters.reply & ~filters.bot
 )
 async def kaj(client, message):
@@ -280,7 +280,7 @@ async def kaj(client, message):
         return
 
 
-@mrjoker.on_message(
+@NK.on_message(
     filters.regex("Mrjoker|mrjoker|mrjoker|MRJOKER|mrjoker")
     & ~filters.bot
     & ~filters.via_bot
