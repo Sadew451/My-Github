@@ -6,23 +6,23 @@ import better_profanity
 import emoji
 import nude
 import requests
-from mrjoker import telethn as tbot
+from NK import telethn as tbot
 from better_profanity import profanity
 from google_trans_new import google_translator
 from pymongo import MongoClient
 from telethon import events
 from telethon.tl.types import ChatBannedRights
 
-from mrjoker import BOT_ID
-from mrjoker.conf import get_str_key
-from mrjoker.events import register
-from mrjoker.modules.sql_extended.nsfw_watch_sql import (
+from NK import BOT_ID
+from NK.conf import get_str_key
+from NK.events import register
+from NK.modules.sql_extended.nsfw_watch_sql import (
     add_nsfwatch,
     get_all_nsfw_enabled_chat,
     is_nsfwatch_indb,
     rmnsfwatch,
 )
-from mrjoker.pyro.telethonbasics import is_admin
+from NK.pyro.telethonbasics import is_admin
 
 translator = google_translator()
 MUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=False)
@@ -31,7 +31,7 @@ MONGO_DB_URI = get_str_key("MONGO_DB_URI")
 
 client = MongoClient()
 client = MongoClient(MONGO_DB_URI)
-db = client["mrjoker"]
+db = client["Natsuki"]
 
 async def is_nsfw(event):
     lmao = event
@@ -131,7 +131,7 @@ async def ws(event):
         await event.delete()
         st = sender.first_name
         hh = sender.id
-        final = f"**NSFW DETECTED**\n\n{st}](tg://user?id={hh}) your message contain NSFW content.. So, Mr.Joker deleted the message\n\n **Nsfw Sender - User / Bot :** {st}](tg://user?id={hh})"
+        final = f"**NSFW DETECTED**\n\n{st}](tg://user?id={hh}) your message contain NSFW content.. So, Natsuki deleted the message\n\n **Nsfw Sender - User / Bot :** {st}](tg://user?id={hh})"
         dev = await event.respond(final)
         await asyncio.sleep(10)
         await dev.delete()
@@ -347,12 +347,17 @@ async def del_profanity(event):
 #
 
 __help__ = """
-*Group Guardian:*
-ANim Manager ✨ can protect your group from NSFW senders, Slang word users and also can force members to use English
+Group Guardian
 
-*Commmands*
- 🔹 `/gshield` on/off - Enable|Disable Porn cleaning
- 🔹 `/globalmode` on/off - Enable|Disable English only mode
- 🔹 `/profanity` on/off - Enable|Disable slag word cleaning
+Natsuki can protect your group from NSFW senders, Slang word users and also can force members to use English
+
+Commmands
+ 
+(=) /gshield on/off - Enable|Disable Porn cleaning
+(=) /globalmode on/off - Enable|Disable English only mode
+(=) /profanity on/off - Enable|Disable slag word cleaning
+
+@TheNatsukiBot
+
 """
 __mod_name__ = "Group-Shield"
