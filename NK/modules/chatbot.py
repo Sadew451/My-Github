@@ -10,7 +10,7 @@ from pyrogram import filters, idle
 
 from NK import BOT_ID, pbot as mrjoker
 from NK.hextra.aichat import add_chat, get_session, remove_chat
-from NK.pyro.pluginshelper import admins_only, edit_or_reply
+from NK.pyrograme.pluginshelper import admins_only, edit_or_reply
 
 translator = google_translator()
 
