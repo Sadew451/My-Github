@@ -27,12 +27,12 @@ from telegram.ext.dispatcher import run_async
 from telegram.utils.helpers import escape_markdown
 from tswift import Song
 
-from mrjoker import DEV_USERS, OWNER_ID, dispatcher
-from mrjoker.__main__ import GDPR, STATS
-from mrjoker.modules.disable import DisableAbleCommandHandler
-from mrjoker.modules.helper_funcs.alternate import send_action, typing_action
-from mrjoker.modules.helper_funcs.chat_status import user_admin
-from mrjoker.modules.helper_funcs.filters import CustomFilters
+from NK import DEV_USERS, OWNER_ID, dispatcher
+from NK.__main__ import GDPR, STATS
+from NK.modules.disable import DisableAbleCommandHandler
+from NK.modules.helper_funcs.alternate import send_action, typing_action
+from NK.modules.helper_funcs.chat_status import user_admin
+from NK.modules.helper_funcs.filters import CustomFilters
 
 
 @run_async
@@ -599,36 +599,36 @@ def stats(update, context):
 
 # /ip is for private use
 __help__ = """
-  🔹 `/gdpr`: Deletes your information from the bot's database. Private chats only.
-  🔹 `/markdownhelp`: Quick summary of how markdown works in telegram - can only be called in private chats.
-  🔹 `/removebotkeyboard`: Got a nasty bot keyboard stuck in your group?
-*➩Info:*
-   🔹 `/whois`: Get information about user using pyrogram  method.
-*➩Translator:*
-   🔹 `/tr` or `/tl`: To translate to your language, by default language is set to english, use /tr <lang code> for some other language!
-   🔹 `/splcheck`: As a reply to get grammar corrected text of gibberish message.
-   🔹 `/tts`: To some message to convert it into audio format!
-   🔹 `/stt`: Convert audio to text ( only English).
-*➩Search:*
-   🔹 `/google` <text>:- search google queries.Use in bot pm (admin can use in group).
-   🔹 `/wiki`: Search wikipedia articles.
-   🔹 `/ud` <query>: Search stuffs in urban dictionary.
-   🔹 `/app` <app name>: Finds an app in playstore for you
-   🔹 `/cash`: currency converter
-   🔹 `/wall` <query>: Get random wallpapers directly from bot!
-*➩Github:*
-   🔹 `/git`: Returns info about a GitHub user or organization.
-*➩Covid:*
-   🔹 `/covid` :To get Global data.
-   🔹 `/covid` <country>:To get data of a country.
+  (=) /gdpr : Deletes your information from the bot's database. Private chats only.
+  (=) /markdownhelp : Quick summary of how markdown works in telegram - can only be called in private chats.
+  (=) /removebotkeyboard : Got a nasty bot keyboard stuck in your group?
+Info
+   (=) /whois : Get information about user using pyrogram  method.
+Translator
+   (=) /t or/tr : To translate to your language, by default language is set to english, use /tr <lang code> for some other language!
+   (=) /splcheck : As a reply to get grammar corrected text of gibberish message.
+   (=) /tts: To some message to convert it into audio format!
+   (=) /stt : Convert audio to text ( only English).
+Search
+   (=) /google <text>:- search google queries.Use in bot pm (admin can use in group).
+   (=) /wiki : Search wikipedia articles.
+   (=) /ud <query>: Search stuffs in urban dictionary.
+   (=) /app <app name>: Finds an app in playstore for you
+   (=) /cash : currency converter
+   (=) /wall <query>: Get random wallpapers directly from bot!
+Github
+   (=) /git : Returns info about a GitHub user or organization.
+Covid
+   (=) /covid :To get Global data.
+   (=) /covid <country>:To get data of a country.
  
-*➩Paste:*
-   🔹 `/paste`: Create a paste or a shortened url using dogbin. *From letters to url.*
-   🔹 `/getpaste`: Get the content of a paste or shortened url from dogbin
-   🔹 `/fpaste`: Create a paste or a shortened url using dogbin and nekobin.*From files to url.*
-*➩Time and Weather:*
-   🔹 `/time` <query>: Gives information about a timezone.
-   🔹 `/weather` <city>: Gets weather information of particular place!
+Paste
+   (=) /paste : Create a paste or a shortened url using dogbin. *From letters to url.
+   (=) /getpaste: Get the content of a paste or shortened url from dogbin
+   (=) /fpaste : Create a paste or a shortened url using dogbin and nekobin.*From files to url.
+Time and Weather
+   (=) /time <query>: Gives information about a timezone.
+   (=) /weather <city>: Gets weather information of particular place!
 \
 """
 
