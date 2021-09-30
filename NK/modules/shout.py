@@ -3,8 +3,8 @@ from typing import List
 from telegram import Update, Bot
 from telegram.ext import run_async
 
-from mrjoker import dispatcher
-from mrjoker.modules.disable import DisableAbleCommandHandler
+from NK import dispatcher
+from NK.modules.disable import DisableAbleCommandHandler
 
 
 @run_async
@@ -26,7 +26,7 @@ __help__ = """
  
  i.e /shout HELP, bot replies with huge coded HELP letters within the square. 
  
- - /shout <keyword>: write anything you want to give loud shout.
+ (=) /shout <keyword>: write anything you want to give loud shout.
     ```
     t e s t
     e e
