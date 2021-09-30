@@ -1,8 +1,8 @@
 from pyrogram import filters
 
-from mrjoker import pbot
-from mrjoker.utils.errors import capture_err
-from mrjoker.function.carbonfunc import make_carbon
+from NK import pbot
+from NK.utils.errors import capture_err
+from NK.function.carbonfunc import make_carbon
 
 
 @pbot.on_message(filters.command("carbon"))
@@ -24,7 +24,8 @@ async def carbon_func(_, message):
     carbon.close()
 
 __help__ = """
-  🔹 `/carbon` <text> [or reply]
+  
+(=) /carbon` <text> [or reply]
   
 Usage: Beautify your code using carbon.now.sh
 """
