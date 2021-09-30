@@ -1,7 +1,7 @@
 import os
 
-from mrjoker import telethn as tbot
-from mrjoker.events import register
+from NK import telethn as tbot
+from NK.events import register
 from PIL import Image
 from datetime import datetime
 from telegraph import Telegraph, upload_file, exceptions
@@ -12,7 +12,7 @@ r = telegraph.create_account(short_name=mj)
 auth_url = r["auth_url"]
 TMP_DOWNLOAD_DIRECTORY = "./"
 
-@register(pattern="^/t(m|xt) ?(.*)")
+@register(pattern="^/telegraph ?(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -81,8 +81,11 @@ def resize_image(image):
 
 __help__ = """
 I can upload files to Telegraph
-🔹 `/tm` :Get Telegraph Link Of Replied Media
-🔹 `/txt` :Get Telegraph Link of Replied Text
+
+(=) /telegraph : Get Telegraph Link Of Replied Media
+
+@TheNatsukiBot
+
 """
 
 __mod_name__ = "Telegraph"
