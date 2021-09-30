@@ -6,7 +6,7 @@ from pyrogram.types import (
     Message,
 )
 
-from mrjoker.imgedit.edit_1 import (  # pylint:disable=import-error
+from NK.Image_Edtitor.edit_1 import (  # pylint:disable=import-error
     black_white,
     box_blur,
     bright,
@@ -14,7 +14,7 @@ from mrjoker.imgedit.edit_1 import (  # pylint:disable=import-error
     mix,
     normal_blur,
 )
-from mrjoker.imgedit.edit_2 import (  # pylint:disable=import-error
+from NK.Image_Edtitor.edit_2 import (  # pylint:disable=import-error
     cartoon,
     circle_with_bg,
     circle_without_bg,
@@ -24,13 +24,13 @@ from mrjoker.imgedit.edit_2 import (  # pylint:disable=import-error
     sepia_mode,
     sticker,
 )
-from mrjoker.imgedit.edit_3 import (  # pylint:disable=import-error
+from NK.Image_Edtitor.edit_3 import (  # pylint:disable=import-error
     black_border,
     blue_border,
     green_border,
     red_border,
 )
-from mrjoker.imgedit.edit_4 import (  # pylint:disable=import-error
+from NK.Image_Edtitor.edit_4 import (  # pylint:disable=import-error
     inverted,
     removebg_plain,
     removebg_sticker,
@@ -40,7 +40,7 @@ from mrjoker.imgedit.edit_4 import (  # pylint:disable=import-error
     rotate_270,
     round_sticker,
 )
-from mrjoker.imgedit.edit_5 import (  # pylint:disable=import-error
+from NK.Image_Edtitor.edit_5 import (  # pylint:disable=import-error
     normalglitch_1,
     normalglitch_2,
     normalglitch_3,
@@ -52,7 +52,7 @@ from mrjoker.imgedit.edit_5 import (  # pylint:disable=import-error
     scanlineglitch_4,
     scanlineglitch_5,
 )
-from mrjoker import pbot as Client
+from NK import pbot as Client
 
 lel = 00000000
 # pylint:disable=import-error
@@ -72,7 +72,7 @@ async def photo(client: Client, message: Message):
     try:
         await client.send_message(
             chat_id=message.chat.id,
-            text="Select your required mode from below! 🤡",
+            text="Select your required mode from below!",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
@@ -264,7 +264,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             )
         elif query.data == "circle":
             await query.message.edit_text(
-                "🔲**Select required mode**🔲",
+                "**Select required mode**",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
@@ -449,6 +449,10 @@ __mod_name__ = "Image Editor"
 __help__ = """
 Cutiepii have some advanced image editing tools inbuilt
 Bright, Circle, RemBG, Blur, Border, Flip, Glitch, Sticker maker and more
-  🔹 `/edit [reply to image]`*:* Open the image editor
-  🔹 `/rmbg [REPLY]`*:* Revove BG of replied image/sticker.
+
+(=) /edit [reply to image] : Open the image editor
+(=) /rmbg [REPLY] : Revove BG of replied image/sticker.
+
+@TheNatsukiBot
+
 """
