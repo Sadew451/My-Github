@@ -5,8 +5,8 @@ import os
 import heroku3
 import requests
 
-from mrjoker import HEROKU_APP_NAME, HEROKU_API_KEY, OWNER_ID
-from mrjoker.events import register
+from NK import HEROKU_APP_NAME, HEROKU_API_KEY, OWNER_ID
+from NK.events import register
 
 heroku_api = "https://api.heroku.com"
 Heroku = heroku3.from_key(HEROKU_API_KEY)
@@ -157,7 +157,7 @@ async def dyno_usage(dyno):
     await asyncio.sleep(1.5)
 
     return await die.edit(
-        "**🤡 Dyno Usage 🤡**:\n\n"
+        "**(=) Dyno Usage (=)**:\n\n"
         f" -> `Dyno usage for`  **{HEROKU_APP_NAME}**:\n"
         f"     •  `{AppHours}`**h**  `{AppMinutes}`**m**  "
         f"**|**  [`{AppPercentage}`**%**]"
@@ -191,7 +191,7 @@ async def _(dyno):
         dyno.chat_id,
         "logs.txt",
         reply_to=dyno.id,
-        caption="Mr Joker Bot Logz.",
+        caption="Natsuki Bot Logz.",
     )
 
     await asyncio.sleep(5)
