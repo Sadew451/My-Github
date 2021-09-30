@@ -4,8 +4,8 @@ import requests as r
 from telegram import Update
 from telegram.ext import CallbackContext, run_async
 
-from mrjoker import SUPPORT_CHAT, WALL_API, dispatcher
-from mrjoker.modules.disable import DisableAbleCommandHandler
+from NK import SUPPORT_CHAT, WALL_API, dispatcher
+from NK.modules.disable import DisableAbleCommandHandler
 
 
 
