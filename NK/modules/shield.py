@@ -357,7 +357,9 @@ Commmands
 (=) /globalmode on/off - Enable|Disable English only mode
 (=) /profanity on/off - Enable|Disable slag word cleaning
 
+Note: Special credits goes to MRJOKER BOT
+
 @TheNatsukiBot
 
 """
-__mod_name__ = "Group-Shield"
+__mod_name__ = "Group Guardian"
