@@ -1,7 +1,7 @@
 import threading
 
-from mrjoker import dispatcher
-from mrjoker.modules.sql import BASE, SESSION
+from NK import dispatcher
+from NK.modules.sql import BASE, SESSION
 from sqlalchemy import (
     Column,
     ForeignKey,
