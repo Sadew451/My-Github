@@ -28,7 +28,7 @@ def load(update: Update, context: CallbackContext):
     )
 
     try:
-        imported_module = importlib.import_module("mrjoker.modules." + text)
+        imported_module = importlib.import_module("NK.modules." + text)
     except:
         load_messasge.edit_text("Does that module even exist?")
         return
@@ -98,7 +98,7 @@ def unload(update: Update, context: CallbackContext):
     )
 
     try:
-        imported_module = importlib.import_module("mrjoker.modules." + text)
+        imported_module = importlib.import_module("NK.modules." + text)
     except:
         unload_messasge.edit_text("Does that module even exist?")
         return
