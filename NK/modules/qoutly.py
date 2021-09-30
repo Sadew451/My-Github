@@ -9,7 +9,7 @@ from fontTools.ttLib import TTFont
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 from telethon.tl import functions, types
 
-from mrjoker.events import register
+from NK.events import register
 
 COLORS = [
     "#F07975",
@@ -452,5 +452,7 @@ async def _(event):
 __mod_name__ = "Quotly"
 
 __help__ = """
-🔹 /q [in reply to message]
+
+(=) /q [in reply to message]
+
 """
