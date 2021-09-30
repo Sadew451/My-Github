@@ -5,9 +5,9 @@ from telegram.error import BadRequest
 from telegram.ext import CallbackContext, CommandHandler, Filters, run_async
 from telegram.utils.helpers import mention_html
 
-from mrjoker import DRAGONS, dispatcher
-from mrjoker.modules.disable import DisableAbleCommandHandler
-from mrjoker.modules.helper_funcs.chat_status import (
+from NK import DRAGONS, dispatcher
+from NK.modules.disable import DisableAbleCommandHandler
+from NK.modules.helper_funcs.chat_status import (
     bot_admin,
     can_pin,
     can_promote,
@@ -15,19 +15,19 @@ from mrjoker.modules.helper_funcs.chat_status import (
     user_admin,
     ADMIN_CACHE,
 )
-from mrjoker.hextra.admin_rights import (
+from NK.hextra.admin_rights import (
     user_can_pin,
     user_can_promote,
     user_can_changeinfo,
 )
 
-from mrjoker.modules.helper_funcs.extraction import (
+from NK.modules.helper_funcs.extraction import (
     extract_user,
     extract_user_and_text,
 )
-from mrjoker.modules.logchannel import loggable
-from mrjoker.modules.helper_funcs.alternate import send_message
-from mrjoker.modules.helper_funcs.alternate import typing_action
+from NK.modules.logchannel import loggable
+from NK.modules.helper_funcs.alternate import send_message
+from NK.modules.helper_funcs.alternate import typing_action
 
 
 @run_async
@@ -636,29 +636,29 @@ def adminlist(update, context):
 
 
 __help__ = """
-╠ `/admins`*:* list of admins in the chat
+`/admins`*:* list of admins in the chat
 
-╔*Admins only:*
-╠ `/pin`*:* silently pins the message replied to - add `'loud'` or `'notify'` to give notifs to users
-╠ `/unpin`*:* unpins the currently pinned message
-╠ `/invitelink`*:* gets invitelink
-╠ `/promote`*:* promotes the user
-╠ `/demote`*:* demotes the user
-╠ `/title` <title here>*:* sets a custom title for an admin that the bot promoted
-╠ `/setgtitle` <newtitle>*:* Sets new chat title in your group.
-╠ `/setgpic`*:* As a reply to file or photo to set group profile pic!
-╠ `/delgpic`*:* Same as above but to remove group profile pic.
-╠ `/setsticke`r*:* As a reply to some sticker to set it as group sticker set!
-╠ `/setdescription` <description>*:* Sets new chat description in group.
-╠ `/admincache`*:* force refresh the admins list
-╠ `/antispam` <on/off/yes/no>*:* Will toggle our antispam tech or return your current settings.
-╠ `/del`*:* deletes the message you replied to
-╠ `/purge`*:* deletes all messages between this and the replied to message.
-╠ `/purge` <integer X>*:* deletes the replied message, and X messages following it if replied to a message.
-╠ `/zombies`: counts the number of deleted account in your group
-╚ `/zombies` clean: Remove deleted accounts from group..
+ *Admins only:*
+`/pin`*:* silently pins the message replied to - add `'loud'` or `'notify'` to give notifs to users
+`/unpin`*:* unpins the currently pinned message
+`/invitelink`*:* gets invitelink
+`/promote`*:* promotes the user
+`/demote`*:* demotes the user
+`/title` <title here>*:* sets a custom title for an admin that the bot promoted
+`/setgtitle` <newtitle>*:* Sets new chat title in your group.
+`/setgpic`*:* As a reply to file or photo to set group profile pic!
+`/delgpic`*:* Same as above but to remove group profile pic.
+`/setsticke`r*:* As a reply to some sticker to set it as group sticker set!
+`/setdescription` <description>*:* Sets new chat description in group.
+`/admincache`*:* force refresh the admins list
+`/antispam` <on/off/yes/no>*:* Will toggle our antispam tech or return your current settings.
+`/del`*:* deletes the message you replied to
+`/purge`*:* deletes all messages between this and the replied to message.
+`/purge` <integer X>*:* deletes the replied message, and X messages following it if replied to a message.
+`/zombies`: counts the number of deleted account in your group
+`/zombies` clean: Remove deleted accounts from group..
 
-⚠️ *Read from top* ⏫
+  *Read from top*
 """
 
 ADMINLIST_HANDLER = DisableAbleCommandHandler("admins", adminlist)
