@@ -1,12 +1,12 @@
 import os
 
-from mrjoker.modules.sql_extended.night_mode_sql import add_nightmode, rmnightmode, get_all_chat_id, is_nightmode_indb
+from NK.modules.sql_extended.night_mode_sql import add_nightmode, rmnightmode, get_all_chat_id, is_nightmode_indb
 from telethon.tl.types import ChatBannedRights
 from apscheduler.schedulers.asyncio import AsyncIOScheduler 
 from telethon import functions
-from mrjoker.events import register
-from mrjoker import OWNER_ID
-from mrjoker import telethn as tbot
+from NK.events import register
+from NK import OWNER_ID
+from NK import telethn as tbot
 from telethon import *
 from telethon import Button, custom, events
 
@@ -168,10 +168,13 @@ scheduler.start()
 
 
 __help__ = f"""
- ╠ `/nimode` on/off
+(=) /NightMode on/off
  
-**Note:** Night Mode chats get Automatically closed at 12pm(IST)
+Note Night Mode chats get Automatically closed at 12pm(IST)
 and Automatically openned at 6am(IST) To Prevent Night Spams.
+
+@TheNatsukiBot
+
 """
 
 __mod_name__ = "Night Mode"
