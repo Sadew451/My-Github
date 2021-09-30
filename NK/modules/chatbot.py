@@ -8,7 +8,7 @@ from asyncio import gather, get_event_loop, sleep
 from googletrans import Translator as google_translator
 from pyrogram import filters, idle
 
-from NK import BOT_ID, pbot as mrjoker
+from NK import BOT_ID, pbot as NK
 from NK.hextra.aichat import add_chat, get_session, remove_chat
 from NK.pyrograme.pluginshelper import admins_only, edit_or_reply
 
