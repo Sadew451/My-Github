@@ -23,12 +23,12 @@ if is_module_loaded(FILENAME):
 
     from telegram.ext.dispatcher import run_async
 
-    from mrjoker.modules.helper_funcs.chat_status import (
+    from NK.modules.helper_funcs.chat_status import (
         connection_status,
         is_user_admin,
         user_admin,
     )
-    from mrjoker.modules.sql import disable_sql as sql
+    from NK.modules.sql import disable_sql as sql
 
     DISABLE_CMDS = []
     DISABLE_OTHER = []
