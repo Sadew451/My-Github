@@ -8,9 +8,9 @@ from asyncio import gather, get_event_loop, sleep
 from googletrans import Translator as google_translator
 from pyrogram import filters, idle
 
-from mrjoker import BOT_ID, pbot as mrjoker
-from mrjoker.hextra.aichat import add_chat, get_session, remove_chat
-from mrjoker.pyro.pluginshelper import admins_only, edit_or_reply
+from NK import BOT_ID, pbot as mrjoker
+from NK.hextra.aichat import add_chat, get_session, remove_chat
+from NK.pyro.pluginshelper import admins_only, edit_or_reply
 
 translator = google_translator()
 
@@ -35,7 +35,7 @@ async def fetch(url):
                         data = await resp.text()
             return data
     except:
-        print("ANim Manager ✨ AI response Timeout")
+        print("Natsuki AI response Timeout")
         return
 
 
@@ -69,20 +69,20 @@ async def kaj(_, message):
         lel = await edit_or_reply(message, "`Processing...`")
         lol = add_chat(int(message.chat.id))
         if not lol:
-            await lel.edit("ANim Manager ✨ AI Already Activated In This Chat")
+            await lel.edit("Natsuki AI Already Activated In This Chat")
             return
         await lel.edit(
-            f"ANim Manager ✨ AI Successfully Added For Users In The Chat {message.chat.id}"
+            f"Natsuki AI Successfully Added For Users In The Chat {message.chat.id}"
         )
 
     elif status == "OFF" or status == "off" or status == "Off":
         lel = await edit_or_reply(message, "`Processing...`")
         Escobar = remove_chat(int(message.chat.id))
         if not Escobar:
-            await lel.edit("ANim Manager ✨ AI Was Not Activated In This Chat")
+            await lel.edit("Natsuki AI Was Not Activated In This Chat")
             return
         await lel.edit(
-            f"ANim Manager ✨ AI Successfully Deactivated For Users In The Chat {message.chat.id}"
+            f"Natsuki AI Successfully Deactivated For Users In The Chat {message.chat.id}"
         )
 
     elif status == "EN" or status == "en" or status == "english":
@@ -100,8 +100,8 @@ async def kaj(_, message):
 @mrjoker.on_message(filters.command("repo") & ~filters.edited)
 async def repo(_, message):
     await message.reply_text(
-        "[GitHub Repo](https://github.com/SenuGamerBoy/Anim_Manager_Old)"
-        + " | [Senu Infnity Group](t.me/senuinfinitygroup)",
+        "[GitHub Repo](https://github.com/Sadew451/TeamNatsuki)"
+        + " | [Support Group](t.me/NatsukiSupport_Official)",
         disable_web_page_preview=True,
     )
 
@@ -355,13 +355,14 @@ async def kaj(client, message):
 
 
 __help__ = """
-*ANim Manager ✨ AI Chatbot* 
+*Natsuki AI System* 
 
- 🔹 `/chatbot` [ON/OFF]: Enables and disables AI Chat mode (EXCLUSIVE)
- 🔹 `/chatbot EN `: Enables English only chatbot
+ 
+(=) /chatbot` [ON/OFF]: Enables and disables AI Chat mode (EXCLUSIVE)
+(=) /chatbot EN `: Enables English only chatbot
  
 Powered by : [Luna ChatBot](https://github.com/TheHamkerCat/LunaChatBot)
 
 """
 
-__mod_name__ = "ChatBot"
+__mod_name__ = "Ai System"
