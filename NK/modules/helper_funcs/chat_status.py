@@ -402,6 +402,6 @@ def connection_status(func):
 
 
 # Workaround for circular import with connection.py
-from mrjoker.modules import connection
+from NK.modules import connection
 
 connected = connection.connected
