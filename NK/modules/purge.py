@@ -5,8 +5,8 @@ from telethon import events
 from telethon.errors.rpcerrorlist import MessageDeleteForbiddenError
 from telethon.tl.types import ChannelParticipantsAdmins
 
-from mrjoker import DEV_USERS, telethn
-from mrjoker.modules.helper_funcs.telethn.chatstatus import (
+from NK import DEV_USERS, telethn
+from NK.modules.helper_funcs.telethn.chatstatus import (
     can_delete_messages,
     user_is_admin,
 )
@@ -96,11 +96,14 @@ async def delete_messages(event):
 
 
 __help__ = """
-*Admin only:*
+Admin only
 
- 🔹 `/del`*:* deletes the message you replied to.
- 🔹 `/purge`*:* deletes all messages between this and the replied to message.
- 🔹 `/purge` <integer X>*:* deletes the replied message, and X messages following it if replied to a message.
+(=) /del : deletes the message you replied to.
+(=) /purge : deletes all messages between this and the replied to message.
+(=) /purge <integer X> : deletes the replied message, and X messages following it if replied to a message.
+
+@TheNatsukiBot
+
 """
 
 __mod_name__ = "Purges"
