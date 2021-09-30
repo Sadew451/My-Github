@@ -12,10 +12,10 @@ from telegram.ext import (
 )
 from telegram.utils.helpers import mention_html
 
-from mrjoker import DRAGONS, LOGGER, TIGERS, WOLVES, dispatcher
-from mrjoker.modules.helper_funcs.chat_status import user_admin, user_not_admin
-from mrjoker.modules.logchannel import loggable
-from mrjoker.modules.sql import reporting_sql as sql
+from NK import DRAGONS, LOGGER, TIGERS, WOLVES, dispatcher
+from NK.modules.helper_funcs.chat_status import user_admin, user_not_admin
+from NK.modules.logchannel import loggable
+from NK.modules.sql import reporting_sql as sql
 
 REPORT_GROUP = 12
 REPORT_IMMUNE_USERS = DRAGONS + TIGERS + WOLVES
@@ -112,23 +112,23 @@ def report(update: Update, context: CallbackContext) -> str:
             keyboard = [
                 [
                     InlineKeyboardButton(
-                        "➡ Message",
+                        " Message",
                         url=f"https://t.me/{chat.username}/{message.reply_to_message.message_id}",
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "⚠ Kick",
+                        " Kick",
                         callback_data=f"report_{chat.id}=kick={reported_user.id}={reported_user.first_name}",
                     ),
                     InlineKeyboardButton(
-                        "⛔️ Ban",
+                        " Ban",
                         callback_data=f"report_{chat.id}=banned={reported_user.id}={reported_user.first_name}",
                     ),
                 ],
                 [
                     InlineKeyboardButton(
-                        "❎ Delete Message",
+                        " Delete Message",
                         callback_data=f"report_{chat.id}=delete={reported_user.id}={message.reply_to_message.message_id}",
                     )
                 ],
@@ -229,10 +229,10 @@ def buttons(update: Update, context: CallbackContext):
         try:
             bot.kickChatMember(splitter[0], splitter[2])
             bot.unbanChatMember(splitter[0], splitter[2])
-            query.answer("✅ Succesfully kicked")
+            query.answer(" Succesfully kicked")
             return ""
         except Exception as err:
-            query.answer("🛑 Failed to Kick")
+            query.answer(" Failed to Kick")
             bot.sendMessage(
                 text=f"Error: {err}",
                 chat_id=query.message.chat_id,
@@ -241,7 +241,7 @@ def buttons(update: Update, context: CallbackContext):
     elif splitter[1] == "banned":
         try:
             bot.kickChatMember(splitter[0], splitter[2])
-            query.answer("✅  Succesfully Banned")
+            query.answer("  Succesfully Banned")
             return ""
         except Exception as err:
             bot.sendMessage(
@@ -249,11 +249,11 @@ def buttons(update: Update, context: CallbackContext):
                 chat_id=query.message.chat_id,
                 parse_mode=ParseMode.HTML,
             )
-            query.answer("🛑 Failed to Ban")
+            query.answer(" Failed to Ban")
     elif splitter[1] == "delete":
         try:
             bot.deleteMessage(splitter[0], splitter[3])
-            query.answer("✅ Message Deleted")
+            query.answer(" Message Deleted")
             return ""
         except Exception as err:
             bot.sendMessage(
@@ -261,18 +261,19 @@ def buttons(update: Update, context: CallbackContext):
                 chat_id=query.message.chat_id,
                 parse_mode=ParseMode.HTML,
             )
-            query.answer("🛑 Failed to delete message!")
+            query.answer(" Failed to delete message!")
 
 
 __help__ = """
 
- 🔹 `/report` <reason>*:* reply to a message to report it to admins.
-      `@admin`*:* reply to a message to report it to admins.
-*NOTE:* Neither of these will get triggered if used by admins.
+(=) /report <reason> : reply to a message to report it to admins.
+    @admin : reply to a message to report it to admins.
+
+NOTE: Neither of these will get triggered if used by admins.
 
 *Admins only:*
 
- 🔹 `/reports` <on/off>*:* change report setting, or view current status.
+(=) /reports <on/off> : change report setting, or view current status.
      • If done in pm, toggles your status.
      • If in group, toggles that groups's status.
 """
