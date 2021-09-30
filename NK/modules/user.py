@@ -11,10 +11,10 @@ from telegram.ext import (
     run_async,
 )
 
-import mrjoker.modules.sql.users_sql as sql
-from mrjoker import DEV_USERS, LOGGER, OWNER_ID, dispatcher
-from mrjoker.modules.helper_funcs.chat_status import dev_plus, sudo_plus
-from mrjoker.modules.sql.users_sql import get_all_users
+import NK.modules.sql.users_sql as sql
+from NK import DEV_USERS, LOGGER, OWNER_ID, dispatcher
+from NK.modules.helper_funcs.chat_status import dev_plus, sudo_plus
+from NK.modules.sql.users_sql import get_all_users
 
 USERS_GROUP = 4
 CHAT_GROUP = 5
