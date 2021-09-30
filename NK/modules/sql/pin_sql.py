@@ -3,7 +3,7 @@ import threading
 from sqlalchemy import Integer, Column, String, func, distinct, Boolean
 from sqlalchemy.dialects import postgresql
 
-from mrjoker.modules.sql import SESSION, BASE
+from NK.modules.sql import SESSION, BASE
 
 
 class SPinSettings(BASE):
