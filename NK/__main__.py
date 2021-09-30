@@ -78,13 +78,9 @@ MRJOKER_AUD = "https://audio.jukehost.co.uk/kKJkdHgoMPeqdel4sDrEHr7m4U6o4Xya"
 
 
 PM_START_TEXT = """
-Hey there!👋  My name is ANim Manager [✨](https://telegra.ph/file/0003ddc9a28524f99877f.png)
-I am an advanced group management bot by @senuinfinity.💫
-I can manage your  group with lots of useful features, feel free to add me to your group.🎉
-You can keep trust on me without any doubt. 🌵
-I am like a public userbot.🔥
-✨ My Mother : @senuinfinity
-✨ My Father : @SenuGamerBoy
+👋 Hey There, My Name is 𝗡𝗮𝘁𝘀𝘂𝗸𝗶. 
+
+I'm a Powerfull Group Manager Bot With Cool Modules. feel free to add me to your groups!
 """
 
 buttons = [
