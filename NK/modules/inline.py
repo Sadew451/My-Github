@@ -24,9 +24,9 @@ from search_engine_parser import GoogleSearch
 from tswift import Song
 from youtubesearchpython import VideosSearch
 
-from mrjoker.utils.inlinehelper import *
-from mrjoker.utils.plh import fetch, json_prettify
-from mrjoker import pbot as app, OPENWEATHERMAP_ID, TIME_API_KEY
+from NK.utils.inlinehelper import *
+from NK.utils.plh import fetch, json_prettify
+from NK import pbot as app, OPENWEATHERMAP_ID, TIME_API_KEY
 
 dictionary = PyDictionary()
 
@@ -52,89 +52,97 @@ __mod_name__ = "Inline Mode"
 __help__ = """
 ⚊❮❮❮❮ ｢INLINE BOT SERVICE」❯❯❯❯⚊
 
-**I'm more efficient when added as group admin. By the way these commands can be used by anyone in a group via inline**SDSD[.](https://telegra.ph/file/0003ddc9a28524f99877f.png)
+**I'm more efficient when added as group admin. By the way these commands can be used by anyone in a group via inline.
 ──「 Syntax 」──
-@AnimX_Robot [command] [query]
 
-╔ **Commands Available**
-╠ `alive` - Check Bot's Stats.
-╠ `yt` [query] - Youtube Search.
-╠ `tr` [LANGUAGE_CODE] [QUERY]** - Translate Text.
-╠ `modapk` [name] - Give you direct link of mod apk.
-╠ `ud` [QUERY] - Urban Dictionary Query
-╠ `google` [QUERY] - Google Search.
-╠ `webss` [URL] - Take Screenshot Of A Website.
-╠ `bitly` [URL] - Shorten A Link.
-╠ `wall` [Query] - Find Wallpapers.
-╠ `pic` [Query] - Find pictures.
-╠ `saavn` [SONG_NAME] - Get Songs From Saavn.
-╠ `deezer` [SONG_NAME] - Get Songs From Deezer.
-╠ `torrent` [QUERY] - Torrent Search.
-╠ `reddit` [QUERY] - Get memes from reddit.
-╠ `imdb` [QUERY] - Search movies on imdb.
-╠ `spaminfo` [ID] - Get spam info of the user.
-╠ `lyrics` [QUERY] - Get lyrics of the song.
-╠ `paste` [TEXT] - Paste text on pastebin.
-╠ `define` [WORD] - Get definition from Dictionary.
-╠ `synonyms` [WORD] - Get synonyms from Dictionary.
-╠ `antonyms` [WORD] - Get antonyms from Dictionary.
-╠ `country` [QUERY] - Get Information about given country.
-╠ `cs` - Gathers Cricket info (Globally).
-╠ `fakegen` - Gathers fake information.
-╠ `weather` [QUERY] - Get weather information.
-╠ `datetime` [QUERY] - Get Date & time information of given country/region.
-╠ `app` [QUERY] - Search for apps in playstore.
-╠ `gh` [QUERY] - Search github.
-╠ `so` [QUERY] - Search stack overflow.
-╠ `wiki` [QUERY] - Search wikipedia.
-╠ `ping` - Check ping rate.
-╠ `pokedex` [TEXT]: Pokemon Search
+@TheNatsukiBot [command] [query]
+
+Commands Available
+
+(=) alive - Check Bot's Stats.
+(=) yt [query] - Youtube Search.
+(=) tr [LANGUAGE_CODE] [QUERY]** - Translate Text.
+(=) modapk [name] - Give you direct link of mod apk.
+(=) ud [QUERY] - Urban Dictionary Query
+(=) google [QUERY] - Google Search.
+(=) webss [URL] - Take Screenshot Of A Website.
+(=) bitly [URL] - Shorten A Link.
+(=) wall [Query] - Find Wallpapers.
+(=) pic [Query] - Find pictures.
+(=) saavn [SONG_NAME] - Get Songs From Saavn.
+(=) deezer [SONG_NAME] - Get Songs From Deezer.
+(=) torrent [QUERY] - Torrent Search.
+(=) reddit [QUERY] - Get memes from reddit.
+(=) imdb [QUERY] - Search movies on imdb.
+(=) spaminfo [ID] - Get spam info of the user.
+(=) lyrics [QUERY] - Get lyrics of the song.
+(=) paste [TEXT] - Paste text on pastebin.
+(=) define [WORD] - Get definition from Dictionary.
+(=) synonyms [WORD] - Get synonyms from Dictionary.
+(=) antonyms [WORD] - Get antonyms from Dictionary.
+(=) country [QUERY] - Get Information about given country.
+(=) cs - Gathers Cricket info (Globally).
+(=) fakegen - Gathers fake information.
+(=) weather [QUERY] - Get weather information.
+(=) datetime [QUERY] - Get Date & time information of given country/region.
+(=) app [QUERY] - Search for apps in playstore.
+(=) gh [QUERY] - Search github.
+(=) so [QUERY] - Search stack overflow.
+(=) wiki [QUERY] - Search wikipedia.
+(=) ping - Check ping rate.
+(=) pokedex [TEXT]: Pokemon Search
+
+@TheNatsukiBot
+
 """
 
 __MODULE__ = "Inline Mode"
 __HELP__ = """
-⚊❮❮❮❮ ｢INLINE BOT SERVICE」❯❯❯❯⚊
+❮❮❮❮ ｢INLINE BOT SERVICE」❯❯❯❯
 
-[.](https://telegra.ph/file/0003ddc9a28524f99877f.png)
 `I'm more efficient when added as group admin. By the way these commands can be used by anyone in a group via inline`
-   >> **Syntax** <<
+    Syntax 
    
-@AnimX_Robot [command] [query]
+@TheNatsukiBot [command] [query]
 
-   >> **Commands Available** <<
-🔹 **alive** - __Check Bot's Stats.__
-🔹 **yt [query]** - __Youtube Search.__
-🔹 **tr [LANGUAGE_CODE] [QUERY]** - __Translate Text.__
-🔹 **ud [QUERY]** - __Urban Dictionary Query.__
-🔹 **google [QUERY]** - __Google Search.__
-🔹 **modapk [name]** - __Give you direct link of mod apk__
-🔹 **webss [URL]** - __Take Screenshot Of A Website.__
-🔹 **bitly [URL]** - __Shorten A Link.__
-🔹 **wall [Query]** - __Find Wallpapers.__
-🔹 **pic [Query]** - __Find pictures.__
-🔹 **saavn [SONG_NAME]** - __Get Songs From Saavn.__
-🔹 **deezer [SONG_NAME]** - __Get Songs From Deezer.__
-🔹 **torrent [QUERY]** - __Torrent Search.__
-🔹 **reddit [QUERY]** - __Get memes from redit.__
-🔹 **imdb [QUERY]** - __Search movies on imdb.__
-🔹 **spaminfo [id]** - __Get spam info of the user.__
-🔹 **lyrics [QUERY]** - __Get lyrics of given song.__
-🔹 **paste [TEXT]** - __Paste text on pastebin.__
-🔹 **define [WORD]** - __Get definition from Dictionary.__
-🔹 **synonyms [WORD]** - __Get synonyms from Dictionary.__
-🔹 **antonyms [WORD]** - __Get antonyms from Dictionary.__
-🔹 **country [QUERY]** - __Get Information about given country.__
-🔹 **cs** - __Gathers Cricket info (Globally).__
-🔹 **covid [COUNTRY]** - __Get covid updates of given country.__
-🔹 **fakegen** - __Gathers fake information.__
-🔹 **weather [QUERY]** - __Get weather information.__
-🔹 **datetime [QUERY]** - __Get Date & time information of given country/region.__
-🔹 **app [QUERY]** - __Search for apps on playstore.
-🔹 **gh [QUERY]** - __Search github.__
-🔹 **so [QUERY]** - __Search stack overfolw.__
-🔹 **wiki [QUERY]** - __Search wikipedia.__
-🔹 **ping** - __Check ping rate.__
-🔹 **pokedex [TEXT]** - __Pokemon Search.__
+   >> Commands Available <<
+(=) alive - __Check Bot's Stats.__
+(=) yt [query] - __Youtube Search.__
+(=) tr [LANGUAGE_CODE] [QUERY]** - __Translate Text.__
+(=) ud [QUERY] - __Urban Dictionary Query.__
+(=) google [QUERY] - __Google Search.__
+(=) modapk [name] - __Give you direct link of mod apk__
+(=) webss [URL] - __Take Screenshot Of A Website.__
+(=) bitly [URL] - __Shorten A Link.__
+(=) wall [Query] - __Find Wallpapers.__
+(=) pic [Query] - __Find pictures.__
+(=) saavn [SONG_NAME] - __Get Songs From Saavn.__
+(=) deezer [SONG_NAME] - __Get Songs From Deezer.__
+(=) torrent [QUERY] - __Torrent Search.__
+(=) reddit [QUERY] - __Get memes from redit.__
+(=) imdb [QUERY] - __Search movies on imdb.__
+(=) spaminfo [id] - __Get spam info of the user.__
+(=) lyrics [QUERY] - __Get lyrics of given song.__
+(=) paste [TEXT] - __Paste text on pastebin.__
+(=) define [WORD] - __Get definition from Dictionary.__
+(=) synonyms [WORD] - __Get synonyms from Dictionary.__
+(=) antonyms [WORD] - __Get antonyms from Dictionary.__
+(=) country [QUERY] - __Get Information about given country.__
+(=) cs - __Gathers Cricket info (Globally).__
+(=) covid [COUNTRY] - __Get covid updates of given country.__
+(=) fakegen - __Gathers fake information.__
+(=) weather [QUERY] - __Get weather information.__
+(=) datetime [QUERY] - __Get Date & time information of given country/region.__
+(=) app [QUERY] - __Search for apps on playstore.
+(=) gh [QUERY] - __Search stack overfolw.__
+(=) wiki [QUERY] - __Search wikipedia.__
+(=) ping - __Check ping rate.__
+(=) pokedex [TEXT] - __Pokemon Search.__
+
+@TheNatsukiBot
+
+Inline Module By MRJOKER
+
 """
 
 
@@ -440,28 +448,28 @@ async def inline_query_handler(client, query):
             if response is True:
                 date = a["results"]["last_updated"]
                 stats = "**◢ Intellivoid• SpamProtection Info**:\n"
-                stats += f' ❍ **Updated on**: `{datetime.fromtimestamp(date).strftime("%Y-%m-%d %I:%M:%S %p")}`\n'
-                stats += f" ❍ **Chat Info**: [Link](t.me/SpamProtectionBot/?start=00_{cmd})\n"
+                stats += f' (=) **Updated on**: `{datetime.fromtimestamp(date).strftime("%Y-%m-%d %I:%M:%S %p")}`\n'
+                stats += f" (=) **Chat Info**: [Link](t.me/SpamProtectionBot/?start=00_{cmd})\n"
 
                 if a["results"]["attributes"]["is_potential_spammer"] is True:
-                    stats += " ❍ **User**: `USERxSPAM`\n"
+                    stats += " (=) **User**: `USERxSPAM`\n"
                 elif a["results"]["attributes"]["is_operator"] is True:
-                    stats += " ❍ **User**: `USERxOPERATOR`\n"
+                    stats += " (=) **User**: `USERxOPERATOR`\n"
                 elif a["results"]["attributes"]["is_agent"] is True:
-                    stats += " ❍ **User**: `USERxAGENT`\n"
+                    stats += " (=) **User**: `USERxAGENT`\n"
                 elif a["results"]["attributes"]["is_whitelisted"] is True:
-                    stats += " ❍ **User**: `USERxWHITELISTED`\n"
+                    stats += " (=) **User**: `USERxWHITELISTED`\n"
 
-                stats += f' ❍ **Type**: `{a["results"]["entity_type"]}`\n'
-                stats += f' ❍ **Language**: `{a["results"]["language_prediction"]["language"]}`\n'
-                stats += f' ❍ **Language Probability**: `{a["results"]["language_prediction"]["probability"]}`\n'
+                stats += f' (=) **Type**: `{a["results"]["entity_type"]}`\n'
+                stats += f' (=) **Language**: `{a["results"]["language_prediction"]["language"]}`\n'
+                stats += f' (=) **Language Probability**: `{a["results"]["language_prediction"]["probability"]}`\n'
                 stats += "**Spam Prediction**:\n"
-                stats += f' ❍ **Ham Prediction**: `{a["results"]["spam_prediction"]["ham_prediction"]}`\n'
-                stats += f' ❍ **Spam Prediction**: `{a["results"]["spam_prediction"]["spam_prediction"]}`\n'
+                stats += f' (=) **Ham Prediction**: `{a["results"]["spam_prediction"]["ham_prediction"]}`\n'
+                stats += f' (=) **Spam Prediction**: `{a["results"]["spam_prediction"]["spam_prediction"]}`\n'
                 stats += f'**Blacklisted**: `{a["results"]["attributes"]["is_blacklisted"]}`\n'
                 if a["results"]["attributes"]["is_blacklisted"] is True:
-                    stats += f' ❍ **Reason**: `{a["results"]["attributes"]["blacklist_reason"]}`\n'
-                    stats += f' ❍ **Flag**: `{a["results"]["attributes"]["blacklist_flag"]}`\n'
+                    stats += f' (=) **Reason**: `{a["results"]["attributes"]["blacklist_reason"]}`\n'
+                    stats += f' (=) **Flag**: `{a["results"]["attributes"]["blacklist_flag"]}`\n'
                 stats += f'**PTID**:\n`{a["results"]["private_telegram_id"]}`\n'
                 results.append(
                     InlineQueryResultArticle(
@@ -621,7 +629,7 @@ async def inline_query_handler(client, query):
                 Time Zones:- {tom}
                 Top Level Domain:- {lanester}
                 wikipedia:- {wiki}</b>
-                Gathered By @AnimX_Robot.</b>
+                Gathered By @TheNatsukiBot.</b>
                 """
             results.append(
                 InlineQueryResultArticle(
@@ -887,7 +895,7 @@ async def inline_query_handler(client, query):
                 + app_link
                 + "'>View in Play Store</a>"
             )
-            app_details += "\n\n⚊❮❮❮❮ ｢@AnimX_Robot」❯❯❯❯⚊"
+            app_details += "\n\n⚊❮❮❮❮ ｢@TheNatsukiBot」❯❯❯❯⚊"
             rip.append(
                 InlineQueryResultArticle(
                     title=f"Datails of {app_name}",
