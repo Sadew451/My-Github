@@ -5,8 +5,8 @@ from telegram import Update
 from telegram.ext import CallbackContext, CommandHandler, run_async
 from telethon import events
 
-from mrjoker import dispatcher, telethn
-from mrjoker.modules.helper_funcs.chat_status import dev_plus
+from NK import dispatcher, telethn
+from NK.modules.helper_funcs.chat_status import dev_plus
 
 DEBUG_MODE = False
 
