@@ -13,7 +13,7 @@ from telegram.ext.dispatcher import run_async
 from telegram.error import BadRequest
 from telegram.utils.helpers import escape_markdown, mention_html
 
-from mrjoker import (
+from NK import (
     DEV_USERS,
     OWNER_ID,
     DRAGONS,
@@ -24,15 +24,15 @@ from mrjoker import (
     dispatcher,
     sw,
 )
-from mrjoker.__main__ import STATS, TOKEN, USER_INFO
-import mrjoker.modules.sql.userinfo_sql as sql
-from mrjoker.modules.disable import DisableAbleCommandHandler
-from mrjoker.modules.sql.global_bans_sql import is_user_gbanned
-from mrjoker.modules.sql.afk_sql import is_afk, check_afk_status
-from mrjoker.modules.sql.users_sql import get_user_num_chats
-from mrjoker.modules.helper_funcs.chat_status import sudo_plus
-from mrjoker.modules.helper_funcs.extraction import extract_user
-from mrjoker import telethn as mrjokerTelethonClient
+from NK.__main__ import STATS, TOKEN, USER_INFO
+import NK.modules.sql.userinfo_sql as sql
+from NK.modules.disable import DisableAbleCommandHandler
+from NK.modules.sql.global_bans_sql import is_user_gbanned
+from NK.modules.sql.afk_sql import is_afk, check_afk_status
+from NK.modules.sql.users_sql import get_user_num_chats
+from NK.modules.helper_funcs.chat_status import sudo_plus
+from NK.modules.helper_funcs.extraction import extract_user
+from NK import telethn as mrjokerTelethonClient
 
 
 def no_by_per(totalhp, percentage):
@@ -517,25 +517,38 @@ def __user_info__(user_id):
 
 
 __help__ = """
-╔ *ID:*
-╠ `/id`*:* get the current group id. If used by replying to a message, gets that user's id.
-╚ `/gifid`*:* reply to a gif to me to tell you its file ID.
-╔*Self addded information:*
-╠ `/setme <text>`*:* will set your info
-╚ `/me`*:* will get your or another user's info.
+ID :
+
+(=) /id : get the current group id. If used by replying to a message, gets that user's id.
+(=) /gifid : reply to a gif to me to tell you its file ID.
+
+Self addded information
+
+(=) /setme <text> : will set your info
+(=) /me : will get your or another user's info.
+
 Examples:
- `/setme I am a wolf.`
- `/me @username(defaults to yours if no user specified)`
-╔*Information others add on you:*
-╠ `/bio`*:* will get your or another user's bio. This cannot be set by yourself.
-╚ `/setbio <text>`*:* while replying, will save another user's bio
+(=) /setme I am a wolf.
+(=) /me @username(defaults to yours if no user specified).
+(=) Information others add on you
+(=) /bio : will get your or another user's bio. This cannot be set by yourself.
+(=) /setbio <text> : while replying, will save another user's bio
+
 Examples:
- `/bio @username(defaults to yours if not specified).`
- `/setbio This user is a wolf` (reply to the user)
-╔*Overall Information about you:*
-╚ `/info`*:* get information about a user.
-*What is that health thingy?*
- Come and see [HP System explained](https://t.me/senuinfinity/166)
+
+(=) /bio @username(defaults to yours if not specified).
+(=) /setbio This user is a wolf` (reply to the user)
+
+Overall Information about you
+
+(=) /info : get information about a user.
+
+What is that health thingy
+
+Come and see [HP System explained](https://t.me/Natsuki_Updates)
+
+@TheNatsukiBot
+
 """
 
 SET_BIO_HANDLER = DisableAbleCommandHandler("setbio", set_about_bio)
