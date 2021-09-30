@@ -1,7 +1,7 @@
 import threading
 from typing import Union
 
-from mrjoker.modules.sql import BASE, SESSION
+from NK.modules.sql import BASE, SESSION
 from sqlalchemy import Boolean, Column, Integer, String
 
 
