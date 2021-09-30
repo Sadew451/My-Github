@@ -12,9 +12,9 @@ from telegram.ext import (
 )
 from telegram.utils.helpers import escape_markdown
 
-from mrjoker import dispatcher
-from mrjoker.modules.helper_funcs.handlers import CMD_STARTERS, SpamChecker
-from mrjoker.modules.helper_funcs.misc import is_module_loaded
+from NK import dispatcher
+from NK.modules.helper_funcs.handlers import CMD_STARTERS, SpamChecker
+from NK.modules.helper_funcs.misc import is_module_loaded
 
 FILENAME = __name__.rsplit(".", 1)[-1]
 
@@ -340,16 +340,19 @@ if is_module_loaded(FILENAME):
     dispatcher.add_handler(TOGGLE_HANDLER)
 
     __help__ = """
-    🔹 `/cmds`*:* check the current status of disabled commands
+    (=) /cmds : check the current status of disabled commands
     
-    *Admins only:*
+     Admins only
     
-    🔹 `/enable` <cmd name>*:* enable that command
-    🔹 `/disable` <cmd name>*:* disable that command
-    🔹 `/enablemodule` <module name>*:* enable all commands in that module
-    🔹 `/disablemodule` <module name>*:* disable all commands in that module
-    🔹 `/listcmds`*:* list all possible toggleable commands
-    """
+   (=) /enable <cmd name>*:* enable that command
+   (=) /disable <cmd name>*:* disable that command
+   (=) /enablemodule <module name>*:* enable all commands in that module
+   (=) /disablemodule <module name>*:* disable all commands in that module
+   (=) /listcmds : list all possible toggleable commands
+    
+   @TheNatsukiBot
+   
+   """
 
     __mod_name__ = "Disabling"
 
