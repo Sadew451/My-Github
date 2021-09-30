@@ -5,10 +5,10 @@ from telegram.error import BadRequest
 from telegram.ext import CommandHandler, Filters, MessageHandler, run_async
 
 import tldextract
-from mrjoker import LOGGER, dispatcher
-from mrjoker.modules.disable import DisableAbleCommandHandler
-from mrjoker.modules.helper_funcs.chat_status import user_admin, user_not_admin
-from mrjoker.modules.sql import urlblacklist_sql as sql
+from NK import LOGGER, dispatcher
+from NK.modules.disable import DisableAbleCommandHandler
+from NK.modules.helper_funcs.chat_status import user_admin, user_not_admin
+from NK.modules.sql import urlblacklist_sql as sql
 
 
 @run_async
@@ -163,11 +163,17 @@ __mod_name__ = "Domain Blacklists"
 __help__ = """
 Domain blacklisting is used to stop certain domains from being mentioned in a group, Any time an url on that domain is mentioned, /
 the message will immediately be deleted.
-*NOTE:* domain blacklisting do not affect group admins.
-🔹 `/geturl`: View the current blacklisted urls
-*Admin only:*
-🔹 `/addurl` <urls>: Add a domain to the blacklist. The bot will automatically parse the url.
-🔹 `/delurl` <urls>: Remove urls from the blacklist
+NOTE : domain blacklisting do not affect group admins.
+
+(=) /geturl : View the current blacklisted urls
+
+Admin only
+
+(=) /addurl <urls>: Add a domain to the blacklist. The bot will automatically parse the url.
+(=) /delurl <urls>: Remove urls from the blacklist
+
+@TheNatsukiBot
+
 """
 
 dispatcher.add_handler(URL_BLACKLIST_HANDLER)
