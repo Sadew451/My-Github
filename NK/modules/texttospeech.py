@@ -1,6 +1,6 @@
-from mrjoker import *
-from mrjoker import telethn as tbot
-from mrjoker.events import register
+from NK import *
+from NK import telethn as tbot
+from NK.events import register
 from gtts import gTTS
 from gtts import gTTSError
 from telethon.tl import functions
@@ -26,7 +26,7 @@ async def _(event):
         return
     if event.is_group:
      if not (await is_register_admin(event.input_chat, event.message.sender_id)):
-       await event.reply("🚨 Need Admin Pewer.. You can't use this command.. But you can use in my pm")
+       await event.reply("Need Admin Pewer.. You can't use this command.. But you can use in my pm")
        return
 
     input_str = event.pattern_match.group(1)
