@@ -2,9 +2,9 @@ import sre_constants
 
 import regex
 import telegram
-from mrjoker import LOGGER, dispatcher
-from mrjoker.modules.disable import DisableAbleMessageHandler
-from mrjoker.modules.helper_funcs.regex_helper import infinite_loop_check
+from NK import LOGGER, dispatcher
+from NK.modules.disable import DisableAbleMessageHandler
+from NK.modules.helper_funcs.regex_helper import infinite_loop_check
 from telegram import Update
 from telegram.ext import CallbackContext, Filters, run_async
 
