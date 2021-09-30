@@ -16,8 +16,8 @@ from telegram import (
 from telegram.ext import CallbackContext, run_async
 from telegram.utils.helpers import mention_html
 
-from mrjoker import dispatcher
-from mrjoker.modules.disable import DisableAbleCommandHandler
+from NK import dispatcher
+from NK.modules.disable import DisableAbleCommandHandler
 
 combot_stickers_url = "https://combot.org/telegram/stickers?q="
 
@@ -448,14 +448,18 @@ def makepack_internal(
             parse_mode=ParseMode.MARKDOWN,
         )
     else:
-        msg.reply_text("Failed to create sticker pack. Possibly due to I don't know 🤣.")
+        msg.reply_text("Failed to create sticker pack. Possibly due to I don't know .")
 
 
 __help__ = """
-╔ `/stickerid`*:* reply to a sticker to me to tell you its file ID.
-╠ `/getsticker`*:* reply to a sticker to me to upload its raw PNG file.
-╠ `/kang`*:* reply to a sticker to add it to your pack.
-╚  `/stickers`*:* Find stickers for given term on combot sticker catalogue
+
+(=) /stickerid : reply to a sticker to me to tell you its file ID.
+(=) /getsticker : reply to a sticker to me to upload its raw PNG file.
+(=) /kang : reply to a sticker to add it to your pack.
+(=) /stickers : Find stickers for given term on combot sticker catalogue
+
+@TheNatsukiBot
+
 """
 
 __mod_name__ = "Stickers"
