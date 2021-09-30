@@ -3,7 +3,7 @@ from functools import wraps
 
 from telegram.ext import CallbackContext
 
-from mrjoker.modules.helper_funcs.misc import is_module_loaded
+from NK.modules.helper_funcs.misc import is_module_loaded
 
 FILENAME = __name__.rsplit(".", 1)[-1]
 
@@ -13,9 +13,9 @@ if is_module_loaded(FILENAME):
     from telegram.ext import CommandHandler, JobQueue, run_async
     from telegram.utils.helpers import escape_markdown
 
-    from mrjoker import EVENT_LOGS, LOGGER, dispatcher
-    from mrjoker.modules.helper_funcs.chat_status import user_admin
-    from mrjoker.modules.sql import log_channel_sql as sql
+    from NK import EVENT_LOGS, LOGGER, dispatcher
+    from NK.modules.helper_funcs.chat_status import user_admin
+    from NK.modules.sql import log_channel_sql as sql
 
     def loggable(func):
         @wraps(func)
@@ -193,15 +193,20 @@ if is_module_loaded(FILENAME):
         return "No log channel is set for this group!"
 
     __help__ = """
-╔ *Admins only:*
-╠ `/logchannel`*:* get log channel info
-╠ `/setlog`*:* set the log channel.
-╚ `/unsetlog`*:* unset the log channel.
+Admins only
 
-╔Setting the log channel is done by:
-╠ adding the bot to the desired channel (as an admin!)
-╠ sending `/setlog` in the channel
-╚ forwarding the `/setlog` to the group
+(=) /logchannel : get log channel info
+(=) /setlog : set the log channel.
+(=) /unsetlog : unset the log channel.
+
+Setting the log channel is done by:
+
+(=) adding the bot to the desired channel (as an admin!)
+(=) sending /setlog in the channel
+(=) forwarding the /setlog to the group
+
+@TheNatsukiBot
+
 """
 
     __mod_name__ = "Log Channel"
