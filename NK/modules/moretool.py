@@ -1,36 +1,38 @@
 __help__ = """
-** GPS **
- 🔹 `/gps` <Place> : Show Location on a map
+ GPS 
  
- ** Send **
- 🔹 `/snd` <Text> : Message like the bot
+ (=)/gps <Place> : Show Location on a map
  
-** Grammer **
- 🔹 `/t` <reply> : Show grammer corrected text
+ Send
  
-** Image Tools**
- 🔹 `/img` <text>: perform a image search
- 🔹 `/getqr` <reply to image>: Read QR code
- 🔹 `/makeqr` <reply to text>: Make QR code
+ (=) /snd <Text> : Message like the bot
  
-** Style Text **
- 🔹 `/weebify` : Weebify Text
- 🔹 `/square` : square Text
- 🔹 `/blue` : Blues text
+Grammer 
  
-** Encrypt **
- 🔹 `/encrypt` : Reply text for this command
- 🔹 `/decrypt` : Reply text for this command
+ (=) /t <reply> : Show grammer corrected text
  
-** Heroku **
- 🔹 `/set` : set new var
- 🔹 `/see` : get current var
- 🔹 `/del` : delete var
- 🔹 `/usage` : Get your account Dyno Usage
- 🔹 `/usage` : Get your account Dyno Usage
- 🔹 `/logs` : Get your App logz
+Image Tools
  
-** More **
- 🔹 `/phone` <tp no> : Track Phone no
+ (=) /img <text>: perform a image search
+ (=) /getqr <reply to image>: Read QR code
+ (=) /makeqr <reply to text>: Make QR code
+ 
+Style Text
+ 
+ (=) /weebify : Weebify Text
+ (=)/square : square Text
+ (=) /blue : Blues text
+ 
+Encrypt
+
+ (=) /encrypt : Reply text for this command
+ (=) /decrypt : Reply text for this command
+ 
+More
+ 
+ (=) /phone <tp no> : Track Phone no
+
+@TheNatsukiBot
+
 """
 __mod_name__ = "More Tools"
