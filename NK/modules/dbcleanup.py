@@ -9,10 +9,10 @@ from telegram.ext import (
     run_async,
 )
 
-import mrjoker.modules.sql.global_bans_sql as gban_sql
-import mrjoker.modules.sql.users_sql as user_sql
-from mrjoker import DEV_USERS, OWNER_ID, dispatcher
-from mrjoker.modules.helper_funcs.chat_status import dev_plus
+import NK.modules.sql.global_bans_sql as gban_sql
+import NK.modules.sql.users_sql as user_sql
+from NK import DEV_USERS, OWNER_ID, dispatcher
+from NK.modules.helper_funcs.chat_status import dev_plus
 
 
 def get_invalid_chats(update: Update, context: CallbackContext, remove: bool = False):
