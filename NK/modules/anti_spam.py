@@ -15,7 +15,7 @@ from telegram.ext import (
 from telegram.utils.helpers import mention_html
 
 import NK.modules.sql.global_bans_sql as sql
-from mrjoker import (
+from NK import (
     DEMONS,
     DEV_USERS,
     DRAGONS,
