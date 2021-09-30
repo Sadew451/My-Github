@@ -425,19 +425,20 @@ def mrjoker_about_callback(update, context):
                     InlineKeyboardButton(text="Notes 📋", callback_data="mrjoker_notes"),
                  ],
                  [
-                    InlineKeyboardButton(text="Support 👥", callback_data="NK_support"),
+                    InlineKeyboardButton(text="Support 👥", callback_data="mrjoker_support"),
+                    InlineKeyboardButton(text="Credit 👨🏻‍💻", callback_data="mrjoker_credit"),
                  ],
                  [
-                    InlineKeyboardButton(text="Back", callback_data="NK_back"),
+                    InlineKeyboardButton(text="⌫ Back", callback_data="mrjoker_back"),
                  
                  ]
                 ]
             ),
         )
-    elif query.data == "NK_admin":
+    elif query.data == "mrjoker_admin":
         query.message.edit_text(
             text=f"*Let's make your group bit effective now*"
-            f"\nCongragulations, Natsuki now ready to manage your group."
+            f"\nCongragulations, ANim Manager ✨ now ready to manage your group."
             f"\n\n*Admin Tools*"
             f"\nBasic Admin tools help you to protect and powerup your group."
             f"\nYou can ban members, Kick members, Promote someone as admin through commands of bot."
@@ -447,11 +448,11 @@ def mrjoker_about_callback(update, context):
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="NK_basichelp")]]
+                [[InlineKeyboardButton(text="⌫ Back", callback_data="mrjoker_basichelp")]]
             ),
         )
 
-    elif query.data == "NK_notes":
+    elif query.data == "mrjoker_notes":
         query.message.edit_text(
             text=f"<b> Setting up notes</b>"
             f"\nYou can save message/media/audio or anything as notes"
@@ -459,24 +460,24 @@ def mrjoker_about_callback(update, context):
             f"\n\nYou can also set buttons for notes and filters (refer help menu)",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text= "Back", callback_data="NK_basichelp")]]
+                [[InlineKeyboardButton(text= "⌫ Back", callback_data="mrjoker_basichelp")]]
             ),
         )
-    elif query.data == "NK_support":
+    elif query.data == "mrjoker_support":
         query.message.edit_text(
-            text="* Natsuki support chats*"
+            text="* ANim Manager ✨ support chats*"
             "\nJoin Support Group/Channel",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Devs", url="https://t.me/TeamNatsuki"),
+                    InlineKeyboardButton(text="My Logs", url="https://t.me/animmanagerlog"),
                  ],
                  [
                     InlineKeyboardButton(text="Support 👥", url= "https://t.me/senuinfinitygroup"),
                  ],
                  [
-                    InlineKeyboardButton(text="Credits", callback_data="NK_basichelp"),
+                    InlineKeyboardButton(text="Credits", callback_data="mrjoker_basichelp"),
                  
                  ]
                 ]
@@ -486,14 +487,14 @@ def mrjoker_about_callback(update, context):
         
     elif query.data == "mrjoker_credit":
         query.message.edit_text(
-            text=f"<b> CREDIT FOR Natsuki DEV'S</b>\n"
-            f"\nHere Some Developers Helping in Making The Natsuki Bot",
+            text=f"<b> CREDIT FOR ANim Manager ✨ DEV'S</b>\n"
+            f"\nHere Some Developers Helping in Making The Mr.Joker Bot",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Sadew Jayasekara", url="t.me/Darkridersslk"),
-                    InlineKeyboardButton(text="TEAM NATSUKI", url="t.me/TeamNatsuki"),
+                    InlineKeyboardButton(text="Senu Gamer Boy", url="t.me/SenuGamerBoy"),
+                    InlineKeyboardButton(text="Induwara", url="t.me/Induwara_Edirisooriya"),
                  
                  ]
                 ]
@@ -506,14 +507,14 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi , I'm Natsuki
-                 \nHere is the [Source Code](https://github.com/TeamNatsuki/Natsuki) .""",
+            text=""" Hi , I'm ANim Manager ✨
+                 \nHere is the [Source Code](https://github.com/SenuGamerBoy/Anim_Manager_Old) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Back", callback_data="source_back")
+                    InlineKeyboardButton(text="⌫ Back", callback_data="source_back")
                  ]
                 ]
             ),
@@ -542,7 +543,7 @@ def get_help(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                text="Help ❔",
+                                text="Help 🆘",
                                 url="t.me/{}?start=ghelp_{}".format(
                                     context.bot.username, module
                                 ),
@@ -558,7 +559,7 @@ def get_help(update: Update, context: CallbackContext):
                 [
                     [
                         InlineKeyboardButton(
-                            text="Help ❔",
+                            text="Help 🙋",
                             url="t.me/{}?start=help".format(context.bot.username),
                         )
                     ],
@@ -585,7 +586,7 @@ def get_help(update: Update, context: CallbackContext):
             chat.id,
             text,
             InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="help_back")]]
+                [[InlineKeyboardButton(text="⌫ Back", callback_data="help_back")]]
             ),
         )
 
@@ -658,7 +659,7 @@ def settings_button(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                text="Back",
+                                text="⌫ Back",
                                 callback_data="stngs_back({})".format(chat_id),
                             )
                         ]
@@ -734,7 +735,7 @@ def get_settings(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                text="Settings ",
+                                text="Settings ⚙️",
                                 url="t.me/{}?start=stngs_{}".format(
                                     context.bot.username, chat.id
                                 ),
@@ -808,7 +809,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "I Am Alive")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "𝙄 𝘼ᴍ 𝘼ʟɪᴠᴇ ✨")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
@@ -825,7 +826,7 @@ def main():
     settings_handler = CommandHandler("settings", get_settings)
     settings_callback_handler = CallbackQueryHandler(settings_button, pattern=r"stngs_")
 
-    about_callback_handler = CallbackQueryHandler(mrjoker_about_callback, pattern=r"NK")
+    about_callback_handler = CallbackQueryHandler(mrjoker_about_callback, pattern=r"mrjoker_")
     source_callback_handler = CallbackQueryHandler(Source_about_callback, pattern=r"source_")
 
     donate_handler = CommandHandler("donate", donate)
@@ -854,7 +855,11 @@ def main():
             updater.bot.set_webhook(url=URL + TOKEN)
 
     else:
-        LOGGER.info("""NATSUKI""")
+        LOGGER.info("""      
+▄▀█ █▄░█ █ █▀▄▀█   █▀▄▀█ ▄▀█ █▄░█ ▄▀█ █▀▀ █▀▀ █▀█
+█▀█ █░▀█ █ █░▀░█   █░▀░█ █▀█ █░▀█ █▀█ █▄█ ██▄ █▀▄  
+        
+""")
         updater.start_polling(timeout=15, read_latency=4, clean=True)
 
     if len(argv) not in (1, 3, 4):
@@ -866,7 +871,7 @@ def main():
 
 
 if __name__ == "__main__":
-    LOGGER.info("Successfully loaded Natsuki modules: " + str(ALL_MODULES))
+    LOGGER.info("Successfully loaded ANim Manager ✨ modules: " + str(ALL_MODULES))
     telethn.start(bot_token=TOKEN)
     pbot.start()
     main()
