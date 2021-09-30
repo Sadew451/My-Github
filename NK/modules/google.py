@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 import urllib
-from  mrjoker import telethn as tbot
+from  NK import telethn as tbot
 import glob
 import io
 import os
@@ -21,9 +21,9 @@ from telethon.tl import functions
 from telethon.tl import types
 from telethon.tl.types import *
 
-from mrjoker import *
+from NK import *
 
-from mrjoker.events import register
+from NK.events import register
 
 opener = urllib.request.build_opener()
 useragent = "Mozilla/5.0 (Linux; Android 9; SM-G960F Build/PPR1.180610.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.157 Mobile Safari/537.36"
@@ -267,7 +267,7 @@ async def apk(e):
             + app_link
             + "'>View in Play Store</a>"
         )
-        app_details += "\n\n===> ERZA <==="
+        app_details += "\n\n(=) @TheNatsukiBot (=)"
         await e.reply(app_details, link_preview=True, parse_mode="HTML")
     except IndexError:
         await e.reply("No result found in search. Please enter **Valid app name**")
@@ -278,11 +278,14 @@ async def apk(e):
 __mod_name__ = "Search"
 
 __help__ = """
- 🔹 `/google` <text>*:* Perform a google search
- 🔹 `/img` <text>*:* Search Google for images and returns them\nFor greater no. of results specify lim, For eg: `/img hello lim=10`
- 🔹 `/app` <appname>*:* Searches for an app in Play Store and returns its details.
- 🔹 `/country` <country name>*:* Gathering info about given country
- 🔹 `/Yone` <query>*:* Yone answers the query
+(=) /google <text> : Perform a google search
+(=) /img <text> : Search Google for images and returns them\nFor greater no. of results specify lim, For eg: `/img hello lim=10`
+(=) /app <appname> : Searches for an app in Play Store and returns its details.
+(=) /country <country name> : Gathering info about given country
+(=) /Yone <query> : Yone answers the query
   
-  💡Ex: `Yone where is Sri Lanka?`
+Ex: `Yone where is Sri Lanka?`
+
+@TheNatsukiBot
+
 """
