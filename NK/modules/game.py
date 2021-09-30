@@ -1,6 +1,6 @@
 from telethon.tl.types import InputMediaDice
 
-from mrjoker.events import register
+from NK.events import register
 
 
 @register(pattern="^/dice(?: |$)(.*)")
@@ -65,15 +65,23 @@ async def _(event):
 
 
 __help__ = """
- *Play Game With Emojis:*
-  🔹 `/dice` or `/dice` 1 to 6 any value
-  🔹 `/ball` or `/ball` 1 to 5 any value
-  🔹 `/dart` or `/dart` 1 to 6 any value
+ Play Game With Emojis
+  
+ (=) /dice or /dice 1 to 6 any value
+ (=) /ball or /ball 1 to 5 any value
+ (=) /dart or /dart 1 to 6 any value
+ 
  Usage: hahaha just a magic.
- warning: you would be in trouble if you input any other value than mentioned.
- *Truth And Dare:*
-  🔹 `/Truth` : for random truth.
-  🔹 `/dare` : for random dare.
+
+warning: you would be in trouble if you input any other value than mentioned.
+
+Truth And Dare
+  
+(=) /Truth : for random truth.
+(=) /dare : for random dare.
+
+@TheNatsukiBot
+
 """
 
-__mod_name__ = "Emoji-Games"
+__mod_name__ = "Emoji Games"
