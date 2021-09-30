@@ -1,11 +1,11 @@
 import html
-from mrjoker.modules.disable import DisableAbleCommandHandler
-from mrjoker import dispatcher, DRAGONS
-from mrjoker.modules.helper_funcs.extraction import extract_user
+from NK.modules.disable import DisableAbleCommandHandler
+from NK import dispatcher, DRAGONS
+from NK.modules.helper_funcs.extraction import extract_user
 from telegram.ext import CallbackContext, CallbackQueryHandler, Filters, run_async
-import mrjoker.modules.sql.approve_sql as sql
-from mrjoker.modules.helper_funcs.chat_status import user_admin
-from mrjoker.modules.logchannel import loggable
+import NK.modules.sql.approve_sql as sql
+from NK.modules.helper_funcs.chat_status import user_admin
+from NK.modules.logchannel import loggable
 from telegram import ParseMode, InlineKeyboardMarkup, InlineKeyboardButton, Update
 from telegram.utils.helpers import mention_html
 from telegram.error import BadRequest
@@ -199,12 +199,13 @@ __help__ = """
 Sometimes, you might trust a user not to send unwanted content.
 Maybe not enough to make them admin, but you might be ok with locks, blacklists, and antiflood not applying to them.
 That's what approvals are for - approve of trustworthy users to allow them to send 
-╔*Admin commands:*
-╠ `/approval`*:* Check a user's approval status in this chat.
-╠ `/approve`*:* Approve of a user. Locks, blacklists, and antiflood won't apply to them anymore.
-╠ `/unapprove`*:* Unapprove of a user. They will now be subject to locks, blacklists, and antiflood again.
-╠ `/approved`*:* List all approved users.
-╚ `/unapproveall`*:* Unapprove *ALL* users in a chat. This cannot be undone.
+*Admin commands:*
+
+(=) /approval`*:* Check a user's approval status in this chat.
+(=) /approve`*:* Approve of a user. Locks, blacklists, and antiflood won't apply to them anymore.
+(=) /unapprove`*:* Unapprove of a user. They will now be subject to locks, blacklists, and antiflood again.
+(=) /approved`*:* List all approved users.
+(=) /unapproveall`*:* Unapprove *ALL* users in a chat. This cannot be undone.
 """
 
 APPROVE = DisableAbleCommandHandler("approve", approve)
