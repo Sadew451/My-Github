@@ -4,8 +4,8 @@ import requests
 import wget
 from pyrogram import filters
 
-from mrjoker import pbot as mrjoker 
-from mrjoker.services.dk import get_arg
+from NK import pbot as mrjoker 
+from NK.services.dk import get_arg
 
 
 @mrjoker.on_message(filters.command("saavn"))
@@ -14,10 +14,10 @@ async def song(client, message):
     message.from_user["id"]
     args = get_arg(message) + " " + "song"
     if args.startswith(" "):
-        await message.reply("**Enter song name❗**")
+        await message.reply("**Enter song name**")
         return ""
     m = await message.reply_text(
-        "**Downloading your song,**\n**Plz wait** ⏳️"
+        "**Downloading your song,**\n**Please wait** 🔄"
     )
     try:
         r = requests.get(f"https://jostapi.herokuapp.com/saavn?query={args}")
@@ -42,7 +42,7 @@ import os
 import aiofiles
 import aiohttp
 from pyrogram import filters
-from mrjoker import pbot as mrjoker
+from NK import pbot as mrjoker
 
 ARQ = "https://thearq.tech/"
 
@@ -56,7 +56,7 @@ async def fetch(url):
     return data
 
 async def download_song(url):
-    song_name = f"mrjoker.mp3"
+    song_name = f"NK.mp3"
     async with aiohttp.ClientSession() as session:
         async with session.get(url) as resp:
             if resp.status == 200:
@@ -69,7 +69,7 @@ async def download_song(url):
 @mrjoker.on_message(filters.command("deezer"))
 async def deezer(_, message):
     if len(message.command) < 2:
-        await message.reply_text("**Downloading your song Deezer** ,\n**Plz wait** ⏳️")
+        await message.reply_text("**Downloading your song Deezer** ,\n**Please wait** 🔄")
         return
     text = message.text.split(None, 1)[1]
     query = text.replace(" ", "%20")
@@ -97,8 +97,8 @@ from pyrogram import filters
 from pytube import YouTube
 from youtubesearchpython import VideosSearch
 
-from mrjoker import LOGGER, pbot
-from mrjoker.utils.ut import get_arg
+from NK import LOGGER, pbot
+from NK.utils.ut import get_arg
 
 
 def yt_search(song):
@@ -143,7 +143,7 @@ async def song(client, message):
     status = await message.reply("**Processing...**")
     video_link = yt_search(args)
     if not video_link:
-        await status.edit("**Song not found😪**.")
+        await status.edit("**Song not found**.")
         return ""
     yt = YouTube(video_link)
     audio = yt.streams.filter(only_audio=True).first()
@@ -186,8 +186,8 @@ from pyrogram.errors import FloodWait, MessageNotModified
 from pyrogram.types import *
 from youtube_search import YoutubeSearch
 
-from mrjoker.conf import get_str_key
-from mrjoker import pbot
+from NK.conf import get_str_key
+from NK import pbot
 
 @pbot.on_message(filters.command(["video"]))
 async def video(pbot, message):
@@ -220,7 +220,7 @@ async def video(pbot, message):
             ytdl_data = ytdl.extract_info(link, download=True)
             file_name = ytdl.prepare_filename(ytdl_data)
     except Exception as e:
-        return await msg.edit(f"🚫 **error:** {str(e)}")
+        return await msg.edit(f"**error:** {str(e)}")
     preview = wget.download(thumbnail)
     await msg.edit("**Uploading Video...**")
     await message.reply_video(
@@ -244,8 +244,8 @@ import lyricsgenius
 from pyrogram import filters
 from tswift import Song
 
-from mrjoker.conf import get_str_key
-from mrjoker import pbot
+from NK.conf import get_str_key
+from NK import pbot
 
 GENIUS = get_str_key("GENIUS_API_TOKEN", None)
 
