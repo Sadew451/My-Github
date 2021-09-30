@@ -7,12 +7,12 @@ from telegram import ParseMode, TelegramError, Update
 from telegram.ext import CallbackContext, CommandHandler, run_async
 from telegram.utils.helpers import mention_html
 
-from mrjoker import DEMONS, DEV_USERS, DRAGONS, OWNER_ID, TIGERS, WOLVES, dispatcher
-from mrjoker.modules.helper_funcs.chat_status import dev_plus, sudo_plus, whitelist_plus
-from mrjoker.modules.helper_funcs.extraction import extract_user
-from mrjoker.modules.logchannel import gloggable
+from NK import DEMONS, DEV_USERS, DRAGONS, OWNER_ID, TIGERS, WOLVES, dispatcher
+from NK.modules.helper_funcs.chat_status import dev_plus, sudo_plus, whitelist_plus
+from NK.modules.helper_funcs.extraction import extract_user
+from NK.modules.logchannel import gloggable
 
-ELEVATED_USERS_FILE = os.path.join(os.getcwd(), "mrjoker/elevated_users.json")
+ELEVATED_USERS_FILE = os.path.join(os.getcwd(), "NK/elevated_users.json")
 
 
 def check_user_id(user_id: int, context: CallbackContext) -> Optional[str]:
@@ -553,7 +553,7 @@ def removetiger(update: Update, context: CallbackContext) -> str:
 @run_async
 @whitelist_plus
 def whitelistlist(update: Update, context: CallbackContext):
-    reply = "<b>Known Wolf Disasters 🐺:</b>\n"
+    reply = "<b>Known Wolf Disasters:</b>\n"
     bot = context.bot
     for each_user in WOLVES:
         user_id = int(each_user)
@@ -569,7 +569,7 @@ def whitelistlist(update: Update, context: CallbackContext):
 @run_async
 @whitelist_plus
 def tigerlist(update: Update, context: CallbackContext):
-    reply = "<b>Known Tiger Disasters 🐯:</b>\n"
+    reply = "<b>Known Tiger Disasters:</b>\n"
     bot = context.bot
     for each_user in TIGERS:
         user_id = int(each_user)
@@ -585,7 +585,7 @@ def tigerlist(update: Update, context: CallbackContext):
 @whitelist_plus
 def supportlist(update: Update, context: CallbackContext):
     bot = context.bot
-    reply = "<b>Known Demon Disasters 👹:</b>\n"
+    reply = "<b>Known Demon Disasters:</b>\n"
     for each_user in DEMONS:
         user_id = int(each_user)
         try:
@@ -601,7 +601,7 @@ def supportlist(update: Update, context: CallbackContext):
 def sudolist(update: Update, context: CallbackContext):
     bot = context.bot
     true_sudo = list(set(DRAGONS) - set(DEV_USERS))
-    reply = "<b>Known Dragon Disasters 🐉:</b>\n"
+    reply = "<b>Known Dragon Disasters:</b>\n"
     for each_user in true_sudo:
         user_id = int(each_user)
         try:
@@ -617,7 +617,7 @@ def sudolist(update: Update, context: CallbackContext):
 def devlist(update: Update, context: CallbackContext):
     bot = context.bot
     true_dev = list(set(DEV_USERS) - {OWNER_ID})
-    reply = "<b>Mrjoker Union Members ⚡️:</b>\n"
+    reply = "<b>Natsuki Union Members ⚡️:</b>\n"
     for each_user in true_dev:
         user_id = int(each_user)
         try:
