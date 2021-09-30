@@ -7,15 +7,15 @@ from telegram.ext import CommandHandler, Filters, MessageHandler
 from telegram.ext.dispatcher import run_async
 from telegram.utils.helpers import mention_html
 
-from mrjoker import dispatcher
-from mrjoker.modules.helper_funcs.chat_status import (
+from NK import dispatcher
+from NK.modules.helper_funcs.chat_status import (
     bot_admin,
     user_admin,
     can_pin,
     can_delete
 )
-from mrjoker.modules.logchannel import loggable
-from mrjoker.modules.sql import pin_sql as sql
+from NK.modules.logchannel import loggable
+from NK.modules.sql import pin_sql as sql
 
 
 PMW_GROUP = 13
@@ -199,16 +199,20 @@ is copied without permission
 from the popular Telegram Bot"""
 
 __help__ = """
-*Admin only:*
- 🔹 `/pin`: silently pins the message replied to
-       : add 'loud' or 'notify' to give notifs to users.
- 🔹 `/unpin`: unpins the currently pinned message
- 🔹 `/antichannelpin` <yes/no/on/off>: Don't let telegram auto-pin linked channels.
- 🔹 `/cleanlinked` <yes/no/on/off>: Delete messages sent by the linked channel.
-*Note:*
-When using antichannel pins, make sure to use the `/unpin` command,
+Admin only
+ 
+(=) /pin: silently pins the message replied to
+(=) /unpin : unpins the currently pinned message
+(=) /antichannelpin <yes/no/on/off>: Don't let telegram auto-pin linked channels.
+(=) /cleanlinked <yes/no/on/off>: Delete messages sent by the linked channel.
+
+Note
+When using antichannel pins, make sure to use the /unpin command,
 instead of doing it manually.
 Otherwise, the old message will get re-pinned when the channel sends any messages.
+
+@TheNatsukiBot
+
 """
 
 __mod_name__ = "Pins"
