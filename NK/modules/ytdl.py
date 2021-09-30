@@ -14,7 +14,7 @@ from youtube_dl.utils import (
     XAttrMetadataError,
 )
 
-from mrjoker.events import register as mrjoker
+from NK.events import register as mrjoker
 
 
 @mrjoker(pattern="^/yt(audio|video) (.*)")
@@ -131,8 +131,12 @@ async def download_video(v_url):
 
         
 __help__ = """
- ╔ - `/yt` <text>: perform a youtube search
- ╚ - `/ytaudio` <link> or /ytvideo <link>: Downlods a video or audio from a youtube video to the bots local server
+
+(=) /yt <text>: perform a youtube search
+(=) /ytaudio <link> or /ytvideo <link>: Downlods a video or audio from a youtube video to the bots local server
+
+@TheNatsukiBot
+
 """
 __mod_name__ = "YouTube"        
         
