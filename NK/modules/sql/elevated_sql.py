@@ -1,6 +1,6 @@
 #thx RoseLoverX
 import threading
-from mrjoker.modules.sql import BASE, SESSION
+from NK.modules.sql import BASE, SESSION
 from sqlalchemy import Boolean, Column, Integer, UnicodeText, String
 
 
