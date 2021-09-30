@@ -15,23 +15,23 @@ from telegram.ext import (
 )
 from telegram.utils.helpers import escape_markdown, mention_html
 
-from mrjoker import DRAGONS, LOGGER, dispatcher
-from mrjoker.modules.connection import connected
-from mrjoker.modules.disable import DisableAbleCommandHandler
-from mrjoker.modules.helper_funcs.alternate import send_message, typing_action
-from mrjoker.modules.helper_funcs.chat_status import user_admin
-from mrjoker.modules.helper_funcs.extraction import extract_text
-from mrjoker.modules.helper_funcs.filters import CustomFilters
-from mrjoker.modules.helper_funcs.handlers import MessageHandlerChecker
-from mrjoker.modules.helper_funcs.misc import build_keyboard_parser
-from mrjoker.modules.helper_funcs.msg_types import get_filter_type
-from mrjoker.modules.helper_funcs.string_handling import (
+from NK import DRAGONS, LOGGER, dispatcher
+from NK.modules.connection import connected
+from NK.modules.disable import DisableAbleCommandHandler
+from NK.modules.helper_funcs.alternate import send_message, typing_action
+from NK.modules.helper_funcs.chat_status import user_admin
+from NK.modules.helper_funcs.extraction import extract_text
+from NK.modules.helper_funcs.filters import CustomFilters
+from NK.modules.helper_funcs.handlers import MessageHandlerChecker
+from NK.modules.helper_funcs.misc import build_keyboard_parser
+from NK.modules.helper_funcs.msg_types import get_filter_type
+from NK.modules.helper_funcs.string_handling import (
     button_markdown_parser,
     escape_invalid_curly_brackets,
     markdown_to_html,
     split_quotes,
 )
-from mrjoker.modules.sql import cust_filters_sql as sql
+from NK.modules.sql import cust_filters_sql as sql
 
 HANDLER_GROUP = 10
 
@@ -607,32 +607,36 @@ def __chat_settings__(chat_id, user_id):
 
 
 __help__ = """
- 🔹 `/filters`*:* List all active filters saved in the chat.
+(=) /filters : List all active filters saved in the chat.
 
-*Admin only:*
+Admin only
 
- 🔹 `/filter` <keyword> <reply message>*:* Add a filter to this chat. The bot will now reply that message whenever 'keyword'\
+(=) /filter <keyword> <reply message>*:* Add a filter to this chat. The bot will now reply that message whenever 'keyword'\
 is mentioned. If you reply to a sticker with a keyword, the bot will reply with that sticker. NOTE: all filter \
 keywords are in lowercase. If you want your keyword to be a sentence, use quotes. eg: /filter "hey there" How you \
 doin?
 
- Separate diff replies by `%%%` to get random replies
- *Example:* 
- `/filter "filtername"
+Separate diff replies by `%%%` to get random replies
+Example
+
+(=) /filter "filtername"
+ 
  Reply 1
  %%%
  Reply 2
  %%%
  Reply 3`
 
- 🔹 `/stop` <filter keyword>*:* Stop that filter.
+(=) /stop <filter keyword>*:* Stop that filter.
 
-*Chat creator only:*
+Chat creator only
 
- 🔹 `/removeallfilters`*:* Remove all chat filters at once.
+(=) /removeallfilters`*:* Remove all chat filters at once.
 
-*Note*: Filters also support markdown formatters like: {first}, {last} etc.. and buttons.
+ Filters also support markdown formatters like: {first}, {last} etc.. and buttons.
 Check `/markdownhelp` to know more!
+
+@TheNatsukiBot
 
 """
 
