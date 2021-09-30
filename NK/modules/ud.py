@@ -1,8 +1,8 @@
 from telegram import Update, Bot
 from telegram.ext import run_async
 
-from mrjoker.modules.disable import DisableAbleCommandHandler
-from mrjoker import dispatcher
+from NK.modules.disable import DisableAbleCommandHandler
+from NK import dispatcher
 
 from requests import get
 
@@ -15,7 +15,11 @@ def ud(bot: Bot, update: Update):
   message.reply_text(reply_text)
 
 __help__ = """
- 🔹 `/ud:{word}` Type the word or expression you want to search use. like `/ud` telegram Word: Telegram Definition: A once-popular system of telecommunications, in which the sender would contact the telegram service and speak their [message] over the [phone]. The person taking the message would then send it, via a teletype machine, to a telegram office near the receiver's [address]. The message would then be hand-delivered to the addressee. From 1851 until it discontinued the service in 2006, Western Union was the best-known telegram service in the world.
+ 
+(=) /ud : {word} Type the word or expression you want to search use. like /ud telegram Word: Telegram Definition: A once-popular system of telecommunications, in which the sender would contact the telegram service and speak their [message] over the [phone]. The person taking the message would then send it, via a teletype machine, to a telegram office near the receiver's [address]. The message would then be hand-delivered to the addressee. From 1851 until it discontinued the service in 2006, Western Union was the best-known telegram service in the world.
+
+@TheNatsukiBot
+
 """
 
 __mod_name__ = "Urban dictionary"
