@@ -9,15 +9,15 @@ from telegram.ext import (
     run_async,
 )
 
-from mrjoker import ALLOW_EXCL, CustomCommandHandler, dispatcher
-from mrjoker.modules.disable import DisableAbleCommandHandler
-from mrjoker.modules.helper_funcs.chat_status import (
+from NK import ALLOW_EXCL, CustomCommandHandler, dispatcher
+from NK.modules.disable import DisableAbleCommandHandler
+from NK.modules.helper_funcs.chat_status import (
     bot_can_delete,
     connection_status,
     dev_plus,
     user_admin,
 )
-from mrjoker.modules.sql import cleaner_sql as sql
+from NK.modules.sql import cleaner_sql as sql
 
 if ALLOW_EXCL:
     CMD_STARTERS = ("/", "!")
@@ -230,15 +230,20 @@ def bluetext_ignore_list(update: Update, context: CallbackContext):
 
 
 __help__ = """
-*Blue text cleaner removed any made up commands that people send in your chat.*
- 🔹 `/cleanblue <on/off/yes/no>`*:* clean commands after sending
- 🔹 `/ignoreblue <word>`*:* prevent auto cleaning of the command
- 🔹 `/unignoreblue <word>`*:* remove prevent auto cleaning of the command
- 🔹 `/listblue`*:* list currently whitelisted commands
+Blue text cleaner removed any made up commands that people send in your chat.*
  
- *Following are Disasters only commands, admins cannot use these:*
- 🔹 `/gignoreblue <word>`*:* globally ignores bluetext cleaning of saved word across Suzuya.
- 🔹 `/ungignoreblue <word>`*:* remove said command from global cleaning list
+(=) /cleanblue <on/off/yes/no>`*:* clean commands after sending
+(=) /ignoreblue <word>`*:* prevent auto cleaning of the command
+(=) /unignoreblue <word>`*:* remove prevent auto cleaning of the command
+(=) /listblue`*:* list currently whitelisted commands
+ 
+ Following are Disasters only commands, admins cannot use these:*
+ 
+(=) /gignoreblue <word>`*:* globally ignores bluetext cleaning of saved word across Suzuya.
+(=) /ungignoreblue <word>`*:* remove said command from global cleaning list
+
+@TheNatsukiBot
+
 """
 
 SET_CLEAN_BLUE_TEXT_HANDLER = CommandHandler("cleanblue", set_blue_text_must_click)
