@@ -1,6 +1,6 @@
 # My-Github
 
-![SADEW Git Stats](https://github-readme-stats.vercel.app/api?username=Sadew451&include_all_commits=true&count_private=true&theme=highcontrast) ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=JamesLK6&layout=compact&theme=radical)
+![SADEW Git Stats](https://github-readme-stats.vercel.app/api?username=Sadew451&include_all_commits=true&count_private=true&theme=highcontrast)  ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Sadew451&layout=compact&theme=radical)
 
 # 📊 Stats
 
