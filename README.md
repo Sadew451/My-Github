@@ -10,8 +10,6 @@
 <a href="https://sadewofficial45@gmail.com" target="blank"><img align="center" src="https://img.icons8.com/color/48/000000/gmail--v2.png" alt="Sadew Jayasekara" height="30" width="40" /></a>
 <a href="https://fb.com/SADEWJ45" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="anjana.madu.54" height="30" width="40" /></a>
 
-## YouTube 
-<a href="https://youtube.com/c/SADEWJ"> <img src="https://img.shields.io/youtube/channel/subscribers/UCxV8fWQAm7s-S7RVK51yw-A?V?label=Subscribers&style=for-the-badge&color=red&labelColor=ce463"/> </a>
 
 
 #####
